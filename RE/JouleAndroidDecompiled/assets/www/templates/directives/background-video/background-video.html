@@ -1,0 +1,21 @@
+<div class='background-video' ng-style='{ backgroundColor: backgroundColor }'>
+  <div class='background-video-placeholder' ng-if='!disablePlaceholder' ng-include="'svg/imagePlaceholder.svg#imagePlaceholder'"></div>
+  <video class='background-video-player' loop-limit='loopLimit' loop='true' ng-if='!hideVideo' ng-src='{{ videoURL }}' on-loop-limit-reached='onLoopLimitReachedInternal()' on-play='onVideoPlaying()' playsinline webkit-playsinline width='100%'></video>
+  <div class='background-video-thumbnail' ng-if='(!playing || hideVideo) &amp;&amp; !disablePoster &amp;&amp; !paused' style="background-image: url('{{ posterURL }}')"></div>
+  <div class='play-button-background-gradient' ng-class="{ 'show': !hideVideo &amp;&amp; (loading || (!playing &amp;&amp; !loading &amp;&amp; !autoplay)) }"></div>
+  <div ng-transclude></div>
+  <div class='background-video-control-button' ng-click='playButtonClicked()' ng-if='!hideControls &amp;&amp; !hideVideo'>
+    <svg class='background-video-loading-spinner' ng-class="{ 'show': !playing &amp;&amp; loading }">
+      <use xlink:href='svg/loading.svg#loading'></use>
+    </svg>
+    <div class='background-video-play-button' ng-class="{ 'show': !playing &amp;&amp; !loading &amp;&amp; !autoplay }">
+      <div class='play-button'>
+        <svg class='play-button-icon'>
+          <use xlink:href='svg/play.svg#play'></use>
+        </svg>
+        <span class='play-button-label' i18n='general.playAgain' ng-class="{ 'show': loopLimitReached }"></span>
+        <span class='play-button-label' i18n='general.play' ng-class="{ 'show': !loopLimitReached }"></span>
+      </div>
+    </div>
+  </div>
+</div>

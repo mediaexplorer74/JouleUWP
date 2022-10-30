@@ -1,0 +1,42 @@
+<menu-button class='menu-button-transparent'></menu-button>
+<ion-view class='background-black'>
+  <status-bar-spacer></status-bar-spacer>
+  <ion-content class='background-primary'>
+    <div class='settings-container'>
+      <div class='settings-header'>
+        <svg class='settings-header-icon legal-icon'>
+          <use xlink:href='svg/legal.svg#legal'></use>
+        </svg>
+        <div class='settings-header-text' i18n='settings.importantDocuments'></div>
+      </div>
+      <div class='settings-item' ng-click='handleClickEula()'>
+        <svg class='punch-out-icon-list'>
+          <use xlink:href='svg/punch-out.svg#punch-out'></use>
+        </svg>
+        <div class='settings-item-text' i18n='legal.eula'></div>
+      </div>
+      <div class='settings-item' ng-click='handleClickPrivacy()'>
+        <svg class='punch-out-icon-list'>
+          <use xlink:href='svg/punch-out.svg#punch-out'></use>
+        </svg>
+        <div class='settings-item-text' i18n='legal.privacyPolicy'></div>
+      </div>
+      <div class='settings-item' ng-click='handleClickTerms()'>
+        <svg class='punch-out-icon-list'>
+          <use xlink:href='svg/punch-out.svg#punch-out'></use>
+        </svg>
+        <div class='settings-item-text' i18n='legal.terms'></div>
+      </div>
+      <div class='settings-item' ng-click='handleWarrantyClick()'>
+        <svg class='punch-out-icon-list'>
+          <use xlink:href='svg/punch-out.svg#punch-out'></use>
+        </svg>
+        <div class='settings-item-text' i18n='legal.warranty'></div>
+      </div>
+    </div>
+  </ion-content>
+  <div class='settings-header-background'>
+    <div class='settings-container-header' i18n='settings.legal'></div>
+  </div>
+</ion-view>
+<navigation-button color='textPrimary' state='back'></navigation-button>

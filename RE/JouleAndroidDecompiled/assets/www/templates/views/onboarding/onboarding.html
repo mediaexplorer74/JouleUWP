@@ -1,0 +1,12 @@
+<ion-view class='onboarding'>
+  <background-video loop-limit='1' ng-class="{'center-play-button' : ! videoHasEnded}" on-loop-limit-reached='onLoopLimitReached()' on-play-button-clicked='onVideoPlaying()' poster-slug='./images/app-intro.jpg' video-slug='./videos/app-intro.mp4'></background-video>
+  <div class='large-gradient'></div>
+  <div class='bottom-button-content' ng-class="{'fade-out-title': videoHasStarted}">
+    <div class='bottom-title'>
+      {{onboardingHeader}}
+    </div>
+    <div class='bottom-subtitle' i18n='onboarding.onboardingDirections'></div>
+  </div>
+  <button class='style-rounded color-brand bottom-button button-start-hidden' i18n='onboarding.onboardingButtonPrimary' ng-class="{'fade-in': videoHasEnded}" ng-click='nextButtonClicked()'></button>
+  <close-button class='button-start-hidden' color='white' ng-class="{'fade-in': videoHasStarted &amp;&amp; ! videoHasEnded}" ng-click='nextButtonClicked()' state='skipVideo'></close-button>
+</ion-view>

@@ -1,0 +1,32 @@
+<div class='overlay' ng-show='loaded'>
+  <div class='semi-opaque-layer'></div>
+  <div class='cook-error-overlay-container'>
+    <div class='alert-container'>
+      <svg class='alert-icon'>
+        <use xlink:href='svg/alert.svg#alert'></use>
+      </svg>
+      <div class='alert-title'>{{overlayConfig.shortTitleString}}</div>
+      <div class='alert-body'>{{overlayConfig.shortBodyString}}</div>
+    </div>
+    <div class='time-since-container'>
+      <div class='stopped-for-text' i18n='circulatorError.stoppedFor'></div>
+      <div class='stopped-for-counter'>{{h}}:{{m}}:{{s}}</div>
+    </div>
+    <div class='action-button-container'>
+      <div class='action-button' ng-class="{ 'disabled': !shouldShowResume, 'enabled': shouldShowResume }">
+        <div class='disabled' ng-if='!shouldShowResume'>
+          <svg class='action-icon' ng-class='icon'>
+            <use xlink:href='svg/close.svg#close'></use>
+          </svg>
+          <div class='okay-text' i18n='circulatorError.resume'></div>
+        </div>
+        <div class='enabled' ng-click='handleClick()' ng-if='shouldShowResume'>
+          <svg class='action-icon' ng-class='icon'>
+            <use xlink:href='svg/tick.svg#tick'></use>
+          </svg>
+          <div class='okay-text' i18n='circulatorError.resume'></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

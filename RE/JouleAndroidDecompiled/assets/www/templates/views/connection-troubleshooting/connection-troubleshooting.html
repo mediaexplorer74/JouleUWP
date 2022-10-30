@@ -1,0 +1,49 @@
+<ion-view>
+  <status-bar-spacer></status-bar-spacer>
+  <ion-content class='background-brand-primary'>
+    <div class='troubleshooting-container'>
+      <div class='troubleshooting-title' i18n='connectionTroubleshooting.header'></div>
+      <div class='troubleshooting-messages-container'>
+        <div class='troubleshooting-message-title' i18n='connectionTroubleshooting.instruction' ng-if='isDisconnected || isConnecting'></div>
+        <div class='troubleshooting-message-title' i18n='connectionTroubleshooting.youAreConnectedTitle' ng-if='isConnected'></div>
+        <div class='troubleshooting-messages' ng-repeat='message in messages'>
+          <ul>
+            <li>{{message}}</li>
+          </ul>
+        </div>
+        <div class='suggestion-container' ng-if='showSuggestion'>
+          <a ng-click='suggestionAction()'>{{suggestionText}}</a>
+        </div>
+      </div>
+      <div class='troubleshooting-connection-status-container'>
+        <div class='troubleshooting-spinner' ng-if='isConnecting || isScanning'>
+          <svg class='small-busy-spinner'>
+            <use xlink:href='svg/small-spinner.svg#small-spinner'></use>
+          </svg>
+        </div>
+        <div class='troubleshooting-connected-icon' ng-if='isConnected'>
+          <svg class='troubleshooting-tick'>
+            <use xlink:href='svg/tick.svg#tick'></use>
+          </svg>
+        </div>
+        <div class='troubleshooting-disconnected-icon' ng-if='isDisconnected &amp;&amp; !isScanning'>
+          <svg class='troubleshooting-x'>
+            <use xlink:href='svg/close.svg#close'></use>
+          </svg>
+        </div>
+        <div class='troubleshooting-connection-status' i18n='connectionTroubleshooting.scanning' ng-if='isScanning'></div>
+        <div class='troubleshooting-connection-status' i18n='connectionTroubleshooting.connecting' ng-if='isConnecting &amp;&amp; !isScanning'></div>
+        <div class='troubleshooting-connection-status joule-now-connected' i18n='connectionTroubleshooting.connected' ng-if='isConnected'></div>
+        <div class='troubleshooting-connection-status' i18n='connectionTroubleshooting.disconnected' ng-if='isDisconnected &amp;&amp; !isScanning'></div>
+      </div>
+    </div>
+    <div class='troubleshooting-lower-third'>
+      <div class='troubleshooting-confirm-button-container'>
+        <button class='style-rounded style-bordered' ng-click='primaryButtonAction()' ng-if='showPrimaryButton' type='submit'>{{primaryButtonText}}</button>
+      </div>
+      <div class='troubleshooting-close-button-container'>
+        <button class='style-rounded' i18n='connectionTroubleshooting.cancelButtonText' ng-click='cancelButtonAction()' ng-if='showCancelButton'></button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

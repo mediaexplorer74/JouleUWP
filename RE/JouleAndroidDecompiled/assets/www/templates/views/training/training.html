@@ -1,0 +1,17 @@
+<ion-view class='background-black'>
+  <status-bar-autohide scroll-delegate-handle='trainingScroll'></status-bar-autohide>
+  <ion-content class='background-primary' delegate-handle='trainingScroll' has-bouncing='true' overflow-scroll='{{isOverflowScrollEnabled}}' scrollbar-x='false' scrollbar-y='false'>
+    <div class='training-header'>
+      <div class='item item-image' image-with-placeholder='{{ getCollectionThumbnail(collection) }}'></div>
+      <div class='training-header-content color-white'>
+        <svg>
+          <use xlink:href='svg/training.svg#training'></use>
+        </svg>
+        <div class='top-title' i18n='general.training'></div>
+      </div>
+    </div>
+    <collection-list buffer='true' item-style='listing' slug='training'></collection-list>
+  </ion-content>
+</ion-view>
+<menu-button class='menu-button-white' scroll-delegate-handle='homeScroll'></menu-button>
+<navigation-button class='navigation-button-white' state='home'></navigation-button>

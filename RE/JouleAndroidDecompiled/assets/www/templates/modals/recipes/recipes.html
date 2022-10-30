@@ -1,0 +1,13 @@
+<ion-modal-view>
+  <ion-content class='background-primary'>
+    <div class='recipes-modal-header'>
+      <svg class='recipes-modal-header-icon'>
+        <use xlink:href='svg/recipes.svg#recipes'></use>
+      </svg>
+      <h5 class='recipes-modal-header-title' i18n='general.recipes'></h5>
+    </div>
+    <recipe-card ng-repeat='recipe in guide.recipes' slug='recipe.slug'></recipe-card>
+    <div class='bottom-padding'></div>
+  </ion-content>
+  <close-button ionic-modal='modal' state='x-white'></close-button>
+</ion-modal-view>

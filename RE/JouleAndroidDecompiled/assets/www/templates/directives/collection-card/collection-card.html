@@ -1,0 +1,14 @@
+<div class='card' ng-click='collectionClicked()' ng-if='collection'>
+  <div class='item item-image' image-with-placeholder='{{ getCollectionThumbnail(collection) }}'></div>
+  <div class='card-title-container'>
+    <!-- don't display 'FREE' on the 'All the guides' collection...looks kinda silly -->
+    <!-- TODO: hard-coding for now, but needs fixing once we model prices in contentful -->
+    <div class='free-label' i18n='home.free' ng-class="{ 'placeholder-label' : placeholder}" ng-if="collection.slug != 'all-the-guides'"></div>
+    <div class='card-title' ng-class='{placeholder: placeholder}'>{{ placeholder ? 'placeholder' : collection.title }}</div>
+    <div class='collection-label'>
+      <svg>
+        <use xlink:href='svg/collection.svg#collection'></use>
+      </svg>
+    </div>
+  </div>
+</div>

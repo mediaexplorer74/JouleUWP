@@ -1,0 +1,12 @@
+{
+  "takePhoto": "Take a photo",
+  "shareWithoutPhoto": "Share without a photo",
+  "subject": "I’m cooking with Joule!",
+  "cookMessage": {
+    "manualUntimed": "I’m cooking with Joule. Holding steady at {temperatureValue} °{temperatureUnit}",
+    "manualMinutes": "I’m cooking with Joule. Holding steady at {temperatureValue} °{temperatureUnit} for {durationMinutes} minutes.",
+    "manualHours": "I’m cooking with Joule. Holding steady at {temperatureValue} °{temperatureUnit} for {durationHours} hours.",
+    "guidedMinutes": "I’m cooking {guideTitle} with Joule. Holding steady at {temperatureValue} °{temperatureUnit} for {durationMinutes} minutes.",
+    "guidedHours": "I’m cooking {guideTitle} with Joule. Holding steady at {temperatureValue} °{temperatureUnit} for {durationMinutes} minutes."
+  }
+}

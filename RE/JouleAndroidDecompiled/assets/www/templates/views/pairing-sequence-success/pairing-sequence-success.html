@@ -1,0 +1,11 @@
+<ion-view>
+  <background-video autoplay poster-slug='{{ ::step.image }}' video-slug='{{ ::step.video }}'>
+    <div class='large-gradient'></div>
+  </background-video>
+  <div class='bottom-button-content pairing-success'>
+    <div class='bottom-title' i18n='pairing.SuccessPrompt'></div>
+    <div class='text-description' i18n='pairing.SuccessPromptMessage'></div>
+  </div>
+  <button class='style-rounded color-brand bottom-button' i18n='pairing.SuccessPromptButton' ng-click='buttonAction()'></button>
+  <close-button color='white' ng-click='skipAction()' state='skip'></close-button>
+</ion-view>

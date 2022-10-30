@@ -1,0 +1,46 @@
+{
+  "stoppedFor": "Stopped for",
+  "resume": "Resume",
+  "okText": "More",
+  "cancelText": "Dismiss",
+  "HARDWARE_FAILURE_strings": {
+    "titleString": "Whoops!",
+    "bodyString": "Something has gone seriously wrong, and we were forced to stop Joule. Please contact us for help.",
+    "shortTitleString": "Whoops!",
+    "shortBodyString": "Your hardware has failed."
+  },
+  "TIPPED_OVER_strings": {
+    "titleString": "Help! Joule has fallen, and she can’t get up!",
+    "bodyString": "We've detected that Joule has tipped over. Please stand it up to resume normal functioning.",
+    "shortTitleString": "Tipped Over",
+    "shortBodyString": "Stand Joule upright to continue."
+  },
+  "OVERHEATING_strings": {
+    "titleString": "Bad news: Joule is too hot.",
+    "bodyString": "Joule is too hot. Try uncovering the pot or removing Joule from the water for 10 min. Or do nothing. It’ll start working again when it’s ready.",
+    "shortTitleString": "Overheating",
+    "shortBodyString": "Oh dear. Let’s give Joule a moment to cool down."
+  },
+  "UNKNOWN_REASON_strings": {
+    "titleString": "Cooking Has Stopped.",
+    "bodyString": "Rats. For some reason, Joule is no longer cooking your food.",
+    "shortTitleString": "Cooking Has Stopped.",
+    "shortBodyString": "Rats. For some reason, Joule is no longer cooking your food."
+  },
+  "LOW_WATER_LEVEL_strings": {
+    "titleString": "Uh-oh, the water level is too low.",
+    "bodyString": "To operate properly, Joule needs H20. Please add more.",
+    "shortTitleString": "Low Water Level",
+    "shortBodyString": "Add more water to continue."
+  },
+  "POWER_LOSS_strings": {
+    "titleString": "Uh-oh, Joule has lost power.",
+    "bodyString": "The program was stopped because Joule has lost power.  Try restarting your program.",
+    "shortTitleString": "Power Loss",
+    "shortBodyString": "Joule has lost power."
+  },
+  "BUTTON_PRESSED_strings": {
+    "titleString": "You stopped your cook!",
+    "bodyString": "Let’s see what else you’d like to make."
+  }
+}

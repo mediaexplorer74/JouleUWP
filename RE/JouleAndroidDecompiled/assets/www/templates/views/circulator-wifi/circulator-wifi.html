@@ -1,0 +1,47 @@
+<!-- Assumption: the presence of a 'nextView' on the $scope indicates we're in the -->
+<!-- pairing sequence.  Absence of 'nextView' means we are in wi-fi settings -->
+<menu-button class='menu-button-transparent' ng-if='!nextView'></menu-button>
+<ion-view>
+  <!-- status bar handling -->
+  <status-bar-spacer ng-if='!nextView'></status-bar-spacer>
+  <status-bar-background ng-if='nextView'></status-bar-background>
+  <ion-content class='wifi-scroller background-primary wifi-settings'>
+    <!-- page header if in pairing sequence -->
+    <div class='text-sub-header text-center' ng-if='nextView'>
+      <div class='top-title' i18n='pairing.connectToWifi'></div>
+    </div>
+    <!-- scanning message -->
+    <div class='scan-message' i18n='pairing.wifiScanning' ng-if='scanning'></div>
+    <!-- sad cloud if no results -->
+    <div class='error-container' ng-if='showSadCloud'>
+      <svg class='no-wifi'>
+        <use xlink:href='svg/no-wifi.svg#no-wifi'></use>
+      </svg>
+    </div>
+    <!-- display the wifi results -->
+    <div class='wifi-container' ng-if='connected'>
+      <wifi-selector access-points='accessPoints' connect-access-point='connectAccessPoint'></wifi-selector>
+      <button class='style-rounded style-underlined style-full-width' i18n='pairing.otherNetworkTitle' ng-click='handleClickJoinOtherNetwork()'></button>
+    </div>
+    <!-- connecting spinner -->
+    <div class='connecting-container' ng-if='!connected &amp;&amp; !isPaired'>
+      <ion-spinner class='spinner' icon='crescent'></ion-spinner>
+      <div class='text' i18n='pairing.connecting'></div>
+    </div>
+  </ion-content>
+  <!-- bottom bar -->
+  <div class='status-container'>
+    <div class='status-header' i18n='pairing.selectWifiNetwork' ng-if='connected'></div>
+    <div class='status-header' i18n='pairing.notPaired' ng-if='!connected &amp;&amp; isPaired'></div>
+  </div>
+  <!-- settings page header -->
+  <div class='settings-header-background' ng-if='!nextView'>
+    <div class='settings-container-header' i18n='settings.wifiSettings'></div>
+  </div>
+  <!-- gradient -->
+  <bottom-gradient gradient-style='grey-gradient circulator-wifi'></bottom-gradient>
+  <!-- navigation during pairing sequence -->
+  <close-button action='successAction(true)' ng-if='nextView' state='skip-wifi'></close-button>
+</ion-view>
+<!-- navigation in settings -->
+<navigation-button ng-if='!nextView' state='back'></navigation-button>

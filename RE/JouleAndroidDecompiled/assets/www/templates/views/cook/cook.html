@@ -1,0 +1,120 @@
+<ion-view scroll='false'>
+  <status-bar-spacer ng-if='isGuidedCook'></status-bar-spacer>
+  <div class='guided-cook-page-header' ng-class="{'steps-list-active ' :  stepsSelected}" ng-if='isGuidedCook'>
+    <div class='view-pager' ng-if='isGuidedCook'>
+      <div class='cook-view-pager' i18n='general.cook' ng-class="{ 'unselected' : stepsSelected  }" ng-click='slider.slidePrev()'></div>
+      <div class='steps-view-pager' i18n='general.steps' ng-class="{ 'unselected' : !stepsSelected }" ng-click='slider.slideNext()'></div>
+      <div class='page-indicator' ng-class="{'steps-selected' : stepsSelected }"></div>
+    </div>
+  </div>
+  <ion-slides ng-class="{ 'tease' : swipeTease }" options='sliderOptions' slider='slider'>
+    <ion-slide-page>
+      <ion-view class='background-black'>
+        <ion-content class='background-primary' scroll='false'>
+          <div class='cook-circle' ng-class="{'training-active' : !trainingPowerOff , 'temp-hint' : showTempHint , 'cook-circle-disconnected' : showDisconnectedMessage }" ng-click='cookCircleSelected()'>
+            <!-- Need to use both transform and -webkit-transform so the following can work on all iOS devices -->
+            <div class='cook-circle-progress' ng-style="{ 'transform': getTemperatureProgress(bathTemperature, setPointTemperature), '-webkit-transform': getTemperatureProgress(bathTemperature, setPointTemperature) }"></div>
+            <div class='cook-circle-set-point'>{{ getDisplaySetPointTemperature(setPointTemperature) }} {{showUnit}}</div>
+            <div class='cook-circle-bath-temperature'>
+              <span class='integer-container'>
+                <span class='integer'>{{ getDisplayBathTemperatureInteger(bathTemperature) }}</span>
+                <span class='decimal'>{{ getDisplayBathTemperatureDecimal(bathTemperature) }}</span>
+              </span>
+            </div>
+            <div class='connecting-loader' ng-if='showConnectingSpinner'>
+              <svg class='small-busy-spinner'>
+                <use xlink:href='svg/small-spinner.svg#small-spinner'></use>
+              </svg>
+            </div>
+          </div>
+          <div class='cook-page-connection-status' i18n='connectionTroubleshooting.disconnected' ng-class=" { 'animate-hint' : showDisconnectedMessage }" ng-click='goToTroubleshooting()'></div>
+          <div class='change-temp-hint' i18n='circulatorCook.changeTempHint' ng-class="{ 'animate-hint' : showTempHint }" ng-if='isManualCook'></div>
+          <div class='change-temp-hint' i18n='circulatorCook.changeTempHintGuided' ng-class="{ 'animate-hint' : showTempHint }" ng-if='isGuidedCook'></div>
+          <div class='swipe-to-see-steps' i18n='general.swipeTease' ng-class="{ 'tease' : swipeTease }" ng-if='isGuidedCook'></div>
+          <div class='cook-timer-container' ng-class="{ 'tall' : waitForFoodState, 'disconnected-timer-state' : showDisconnectedMessage }">
+            <!-- Timer for Guided Cooks -->
+            <div ng-if='isGuidedCook'>
+              <div class='cook-timer-button-small-container' ng-class="{ 'center' : waitForFoodState }">
+                <div class='cook-timer-button small' ng-class="{ 'start' : waitForFoodState }" ng-click='timerAction()'>
+                  <svg class='timer-icon' ng-class="{ 'hide-icon' : waitForFoodState }">
+                    <use xlink:href='svg/time-small.svg#time-small'></use>
+                  </svg>
+                  <span class='start-text' i18n='time.start' ng-class="{ 'show' : waitForFoodState  }"></span>
+                </div>
+              </div>
+              <div class='timer-content-container' ng-class="{ 'tall' : waitForFoodState }">
+                <!-- "Your bath is heated." -->
+                <div class='timer-text-prompt' i18n='time.bathHeated' ng-class="{ 'show-heated' : waitForFoodState }"></div>
+                <!-- "Add food and tap Start" -->
+                <div class='timer-text-prompt' i18n='time.addFoodPressCook' ng-class="{ 'show-prompt' : waitForFoodState }"></div>
+                <!-- "Your food will be ready in" -->
+                <div class='timer-text-title align-left' i18n='time.timerRunning' ng-if='timer &amp;&amp; cookState'></div>
+                <!-- "Bath is preheating" -->
+                <div class='timer-text-prompt show-heating' i18n='time.cookTimeSet' ng-class="{ 'dont-show' : !preheatState }"></div>
+                <!-- "Your cook time is" -->
+                <div class='timer-text-title small' i18n='time.yourCookTimeIs' ng-class="{ 'align-left' : !waitForFoodState }" ng-if='preheatState || waitForFoodState'></div>
+                <!-- Preview of the cook time during preheat and waitForFood -->
+                <div class='timer timer-numbers-paused' ng-class="{ 'small' : waitForFoodState }" ng-if='preheatState || waitForFoodState'>
+                  <div class='humanized-time'>{{ humanizeCookTime }}</div>
+                </div>
+                <!-- Timer complete message -->
+                <div class='timer-text-title align-left timer-complete' ng-if='waitForRemoveFoodState'>{{ timerCompletedMessage }}</div>
+                <!-- The actual timer during cooking -->
+                <timer class='cook-view-timer' ng-if='timer &amp;&amp; cookState' timer='timer'></timer>
+              </div>
+            </div>
+            <!-- Timer for Manual Cooks -->
+            <div class='timer' ng-if='isManualCook'>
+              <div class='cook-timer-button' ng-if='!timer.isStarted()' ui-sref='timer'>
+                <svg class='timer-icon'>
+                  <use xlink:href='svg/time-small.svg#time-small'></use>
+                </svg>
+              </div>
+              <div class='cook-timer-button-small-container manual-cook' ng-class="{ 'center-manual-cook-timer' : timer &amp;&amp; timer.getRemainingTime() === 0 }" ng-if='timer.isStarted()' ui-sref='timer'>
+                <div class='cook-timer-button small' ng-class="{ 'get-big-again' : timer &amp;&amp; timer.getRemainingTime() === 0 }">
+                  <svg class='timer-icon' ng-class="{ 'shrink-me' : timer &amp;&amp; timer.getRemainingTime() === 0 }">
+                    <use xlink:href='svg/time-small.svg#time-small'></use>
+                  </svg>
+                </div>
+                <span class='cook-timer-button-label' i18n='time.change' ng-class="{ 'hidden' : timer &amp;&amp; timer.getRemainingTime() === 0 }"></span>
+              </div>
+              <!-- "Set a timer" -->
+              <div class='timer-text-title set-timer' i18n='time.setCookTimer' ng-if='!timer'></div>
+              <!-- Timer complete message -->
+              <div class='timer-text-title manual-timer-complete' i18n='time.timerExpired' ng-if='timer &amp;&amp; timer.getRemainingTime() === 0'></div>
+              <div class='timer-content-container'>
+                <!-- "Timer is running." -->
+                <div class='timer-text-title align-left' i18n='time.running' ng-if='timer &amp;&amp; timer.getRemainingTime() &gt; 0'></div>
+                <!-- The actual timer -->
+                <timer class='cook-view-timer' ng-if='timer' timer='timer'></timer>
+              </div>
+            </div>
+          </div>
+          <!-- Training Overlay -->
+          <div class='training-overlay color-white' ng-if='isTraining'>
+            <div class='training-skip' i18n='pairing.skipTutorial' ng-click='skipTutorial()' ng-if='!trainingPowerOff'></div>
+            <div class='training-skip' i18n='pairing.completeTutorial' ng-click='skipTutorial()' ng-if='trainingPowerOff'></div>
+            <div class='training-text training-cook-circle' ng-if='!trainingPowerOff'>
+              <div class='training-title' i18n='pairing.trainingCookCircleTitle'></div>
+              <div class='training-description' i18n='pairing.trainingCookCircleDescription'></div>
+              <button class='bordered-color-white style-rounded bottom-button' i18n='pairing.trainingCookCircleButton' ng-click='nextTutorial()'></button>
+            </div>
+            <div class='training-text training-turn-off' ng-if='trainingPowerOff'>
+              <div class='training-title' i18n='pairing.trainingStopCookTitle'></div>
+              <div class='training-description' i18n='pairing.trainingStopCookDescription'></div>
+            </div>
+          </div>
+        </ion-content>
+      </ion-view>
+    </ion-slide-page>
+    <ion-slide-page ng-if='shouldShowSteps'>
+      <ion-view class='background-black'>
+        <steps-list id='{{guide.id}}' ng-if='isGuidedCook' program='program' steps='guide.steps'></steps-list>
+      </ion-view>
+    </ion-slide-page>
+  </ion-slides>
+  <cook-error-overlay ng-if='showErrorOverlay' resume-handler='resumeCook' show='showErrorOverlay'></cook-error-overlay>
+</ion-view>
+<menu-button class='menu-button-transparent' ng-if='!isTraining'></menu-button>
+<floating-action-button action='buttonAction()' ng-class="{'hidden' : hideButtons , 'pulse-scale': isTraining &amp;&amp; trainingPowerOff, 'hide-button': isTraining &amp;&amp; !trainingPowerOff }" state='buttonState'></floating-action-button>
+<navigation-button color='textPrimary' ng-class="{ 'hidden' : hideButtons , 'navigation-button-connection-overlay' : showConnectionOverlay }" ng-if='!isTraining' state='home'></navigation-button>

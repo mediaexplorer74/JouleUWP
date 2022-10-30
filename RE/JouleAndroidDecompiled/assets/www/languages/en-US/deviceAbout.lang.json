@@ -1,0 +1,6 @@
+{
+  "circulatorName": "Circulator Name",
+  "appFirmwareVersion": "App Firmware Version",
+  "espFirmwareVersion": "WiFi Firmware Version",
+  "circulatorSerialNumber": "Circulator Serial Number"
+}

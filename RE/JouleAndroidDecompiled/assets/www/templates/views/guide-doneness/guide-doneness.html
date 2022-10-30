@@ -1,0 +1,26 @@
+<ion-view>
+  <ion-slides ng-if='swiperOptions' options='swiperOptions' slider='slider'>
+    <ion-slide-page ng-repeat='program in guide.programs'>
+      <background-video autoplay class='center-play-button' disable-poster='shouldDisablePoster($index)' disable-video='shouldDisableVideo($index)' poster-slug='{{ ::program.image }}' video-slug='{{ program.video }}'>
+        <div class='guide-doneness-gradient'></div>
+      </background-video>
+      <div class='program-helper-gradient' ng-if='program.helper'></div>
+      <div class='program-helper-text' ng-if='program.helper'>{{ program.helper }}</div>
+    </ion-slide-page>
+    <!-- Note these use swiper.activeIndex, not programIndex on purpose because we want their transition -->
+    <!-- starting at the same time as the slider transition starts, not chained to the end of it -->
+    <div class='program-carousel' style='-webkit-transform: translateX(-{{ swiper.activeIndex * programButtonWidth }}px);'>
+      <div class='program-carousel-item' ng-class='{selected: swiper.activeIndex === $index}' ng-click='selectProgram(program)' ng-repeat='program in guide.programs'>
+        <span class='carousel-item-temperature'>{{ ::getTemperatureString(program.cookingTemperature) }}</span>
+        <div class='program-carousel-item-duration'>{{ ::program.duration }}</div>
+      </div>
+    </div>
+  </ion-slides>
+</ion-view>
+<div class='icon-button' ng-click='buttonAction()'>
+  <span i18n='general.setTime'></span>
+  <svg class='icon-spanner-right icon-button-spanner'>
+    <use xlink:href='svg/spanner.svg#spanner'></use>
+  </svg>
+</div>
+<navigation-button class='navigation-button-white' state='back'></navigation-button>

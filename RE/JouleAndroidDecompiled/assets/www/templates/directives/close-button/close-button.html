@@ -1,0 +1,26 @@
+<div class='close-button-container'>
+  <div id='close-button' ng-style='style'>
+    <div ng-switch='state'>
+      <div i18n='general.close' ng-switch-when='close'></div>
+      <div class='close-text' i18n='general.cancel' ng-switch-when='cancel'></div>
+      <div i18n='pairing.skipWifi' ng-switch-when='skip-wifi'></div>
+      <div i18n='general.skip' ng-switch-when='skip'></div>
+      <div i18n='general.skipVideo' ng-switch-when='skipVideo'></div>
+      <div class='close-x' ng-switch-when='x'>
+        <svg>
+          <use ng-switch='state' xlink:href='svg/close.svg#close'></use>
+        </svg>
+      </div>
+      <div class='close-x-white' ng-switch-when='x-white'>
+        <svg>
+          <use ng-switch='state' xlink:href='svg/close.svg#close'></use>
+        </svg>
+      </div>
+      <div class='close-x-black' ng-switch-when='x-black'>
+        <svg>
+          <use ng-switch='state' xlink:href='svg/close.svg#close'></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>

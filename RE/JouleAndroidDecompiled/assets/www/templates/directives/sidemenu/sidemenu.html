@@ -1,0 +1,51 @@
+<ion-scroll class='side-menu-scroll'>
+  <div class='sidemenu-item' ui-sref='home'>
+    <div class='sidemenu-item-text' i18n='sidemenu.home'></div>
+    <svg class='sidemenu-item-icon'>
+      <use xlink:href='svg/home-menu.svg#home-menu'></use>
+    </svg>
+  </div>
+  <div class='sidemenu-item' ui-sref='training'>
+    <div class='sidemenu-item-text' i18n='sidemenu.trainingMissions'></div>
+    <svg class='sidemenu-item-icon'>
+      <use xlink:href='svg/training-small.svg#trainingSmall'></use>
+    </svg>
+  </div>
+  <div class='sidemenu-item' ng-click='onRecipesClick()'>
+    <div class='sidemenu-item-sur-text' i18n='sidemenu.sousVideRecipes'></div>
+    <div class='sidemenu-item-sub-text' i18n='sidemenu.chefstepscom'></div>
+    <svg class='sidemenu-item-icon recipes-icon'>
+      <use xlink:href='svg/punch-out.svg#punch-out'></use>
+    </svg>
+  </div>
+  <div class='sidemenu-item' ui-sref='settings'>
+    <div class='sidemenu-item-text' i18n='sidemenu.settings'></div>
+    <svg class='sidemenu-item-icon'>
+      <use xlink:href='svg/cog.svg#cog'></use>
+    </svg>
+  </div>
+  <div class='sidemenu-item' ui-sref='support'>
+    <div class='sidemenu-item-text' i18n='sidemenu.support'></div>
+    <svg class='sidemenu-item-icon'>
+      <use xlink:href='svg/support.svg#support'></use>
+    </svg>
+  </div>
+  <div class='sidemenu-item' ng-if='developerMenuEnabled()' ui-sref='developerSettings'>
+    <div class='sidemenu-item-text' i18n='sidemenu.developerOptions'></div>
+    <svg class='sidemenu-item-icon'>
+      <use xlink:href='svg/cog.svg#cog'></use>
+    </svg>
+  </div>
+  <div class='side-menu-joule-ad' ng-if='! paired()'>
+    <div class='speech-bubble'>
+      <h4 i18n='marketing.sideMenuCTA'></h4>
+      <h4 class='red-link' i18n='marketing.sideMenuCTALink' ng-click='jouleAdClick()'></h4>
+      <svg class='punch-out-icon-side-menu'>
+        <use xlink:href='svg/punch-out.svg#punch-out'></use>
+      </svg>
+    </div>
+    <svg class='crab-icon'>
+      <use xlink:href='svg/crab.svg#crab'></use>
+    </svg>
+  </div>
+</ion-scroll>

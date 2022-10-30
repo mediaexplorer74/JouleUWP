@@ -1,0 +1,19 @@
+<div>
+  <div class='do-not-background-text' i18n='update.doNotBackgroundApp'></div>
+  <div class='loading-indicator' hide-be-patient-message='true'></div>
+  <div class='progress-text' ng-if='step == steps.uploading'>
+    <div>
+      <span i18n='update.firmwareUpdateUploading'></span>
+      <span>
+        {{currentlyUploadingIndex}} / {{manifest.updates.length}}
+      </span>
+    </div>
+    <div ng-show='showProgress'>
+      {{percentUpdated}} %
+    </div>
+  </div>
+  <div class='progress-text' i18n='update.firmwareUpdateApplying' ng-if='step == steps.applying'></div>
+  <div class='progress-text' i18n='update.firmwareUpdateRebooting' ng-if='step == steps.rebooting'></div>
+  <div class='progress-text' i18n='update.firmwareUpdateReconnecting' ng-if='step == steps.connecting'></div>
+  <div class='progress-text' i18n='update.firmwareUpdateCheckingConnection' ng-if='step == steps.checking'></div>
+</div>

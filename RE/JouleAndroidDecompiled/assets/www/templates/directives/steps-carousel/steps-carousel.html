@@ -1,0 +1,29 @@
+<ion-slides class='steps-carousel' options='sliderOptions' slider='slider'>
+  <ion-slide-page ng-repeat='step in steps'>
+    <background-video autoplay disable-poster='shouldDisablePoster($index)' disable-video='shouldDisableVideo($index)' poster-slug='{{ getStepImage(step) }}' video-slug='{{ step.video }}'>
+      <div class='steps-gradient'>
+        <div class='step-content'>
+          <div class='step-title'>{{ ::step.title }}</div>
+          <div class='step-description'>{{ ::step.description }}</div>
+          <div class='text-center' ng-if='step.buttonLink &amp;&amp; step.buttonText'>
+            <button class='bordered-color-white active-white style-rounded step-learn-more' ng-click='onLearnMoreClick(step.buttonLink)'>{{ ::step.buttonText | limitTo:65 }}</button>
+          </div>
+        </div>
+      </div>
+    </background-video>
+    <ion-scroll class='step-helper'>
+      <div class='step-helper-inner' ng-bind-html='step.helper'></div>
+    </ion-scroll>
+  </ion-slide-page>
+</ion-slides>
+<div class='spanner left' ng-class='{ shown: slider.activeIndex !== 0 }' ng-click='previousStep()'>
+  <svg class='icon-spanner-left'>
+    <use xlink:href='svg/spanner.svg#spanner'></use>
+  </svg>
+</div>
+<div class='spanner right' ng-class='{ shown: slider.activeIndex !== (steps.length - 1) }' ng-click='nextStep()'>
+  <svg class='icon-spanner-right'>
+    <use xlink:href='svg/spanner.svg#spanner'></use>
+  </svg>
+</div>
+<div class='step-carousel-count' data-i18n='general.xOfYCounter' data-index='{{ activeIndex + 1 }}' data-total='{{ steps.length }}'></div>

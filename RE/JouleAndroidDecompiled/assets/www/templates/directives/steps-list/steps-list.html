@@ -1,0 +1,28 @@
+<ion-content class='background-primary'>
+  <div class='steps-list-header'>
+    <div class='guide-steps-header-image' ng-if='guide' style='background-image: url({{ getGuideThumbnail(guide) }})'></div>
+    <div class='guide-title'>{{ guide.title }}</div>
+  </div>
+  <div class='steps-list-container'>
+    <div class='card start-joule-card' ng-click='nextAction()' ng-if='showStartJouleCard()'>
+      <div class='start-joule-animation'>
+        <object data='svg/steaming-joule.svg' type='image/svg+xml'></object>
+      </div>
+      <svg class='see-more-arrow start-joule-card-arrow'>
+        <use xlink:href='svg/spanner.svg#spanner'></use>
+      </svg>
+      <div class='start-joule-card-prompt' i18n='general.startJouleBelow'></div>
+    </div>
+    <div class='card steps-card' ng-click='onStepsClick($index)' ng-repeat='step in steps'>
+      <div class='steps-count'>{{ $index + 1 }}</div>
+      <div class='steps-list-title'>{{ ::step.title }}</div>
+      <svg class='see-more-arrow'>
+        <use xlink:href='svg/spanner.svg#spanner'></use>
+      </svg>
+      <div class='steps-list-description-container'>
+        <span class='steps-list-description'>{{ ::step.description | limitTo:55 }}</span>
+        <span class='ellipsis' ng-if='step.description.length &gt; 55'>...</span>
+      </div>
+    </div>
+  </div>
+</ion-content>

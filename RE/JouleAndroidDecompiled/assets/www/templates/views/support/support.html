@@ -1,0 +1,67 @@
+<menu-button class='menu-button-white' scroll-delegate-handle='homeScroll'></menu-button>
+<ion-view class='background-black'>
+  <status-bar-spacer></status-bar-spacer>
+  <ion-content class='background-primary' scrollbar-x='false' scrollbar-y='false'></ion-content>
+  <ion-content class='background-primary' delegate-handle='trainingScroll' has-bouncing='true' overflow-scroll='{{isOverflowScrollEnabled}}' scrollbar-x='false' scrollbar-y='false'>
+    <div class='training-header'>
+      <div class='item item-image' image-with-placeholder='https://d3awvtnmmsvyot.cloudfront.net/api/file/xaDq1pPSTS6YNFtI8dz4/convert?fit=max&amp;w=2100&amp;quality=60&amp;cache=true&amp;rotate=exif&amp;compress=true'></div>
+      <div class='training-header-content color-white'>
+        <div class='top-title' i18n='settings.supportPrompt'></div>
+      </div>
+    </div>
+    <div class='listing' ng-click='onJouleAppTroubleClick()'>
+      <svg class='support-icon'>
+        <use xlink:href='svg/app-support.svg#app-support'></use>
+      </svg>
+      <div class='listing-title-container'>
+        <div class='listing-text'>
+          <div class='listing-title' i18n='settings.jouleAppTrouble'></div>
+        </div>
+        <svg class='punch-out-icon'>
+          <use xlink:href='svg/punch-out.svg#punch-out'></use>
+        </svg>
+      </div>
+    </div>
+    <div class='listing' ng-click='onSubmitSupportRequestClick()'>
+      <svg class='support-icon contact'>
+        <use xlink:href='svg/contact-us-2.svg#contact-us-2'></use>
+      </svg>
+      <div class='listing-title-container'>
+        <div class='listing-text'>
+          <div class='listing-title' i18n='settings.submitSupportRequest'></div>
+        </div>
+        <svg class='punch-out-icon'>
+          <use xlink:href='svg/punch-out.svg#punch-out'></use>
+        </svg>
+      </div>
+    </div>
+    <div class='listing' ng-click='onMySupportRequestsClick()'>
+      <svg class='support-icon contact'>
+        <use xlink:href='svg/sos-paper-airplane.svg#sos-paper-airplane'></use>
+      </svg>
+      <div class='listing-title-container'>
+        <div class='listing-text'>
+          <div class='listing-title' i18n='settings.mySupportRequests'></div>
+        </div>
+        <svg class='punch-out-icon'>
+          <use xlink:href='svg/punch-out.svg#punch-out'></use>
+        </svg>
+      </div>
+    </div>
+    <div class='listing' ng-click='onKnownIssuesClick()'>
+      <svg class='support-icon known-issues'>
+        <use xlink:href='svg/known-issues.svg#known-issues'></use>
+      </svg>
+      <div class='listing-title-container'>
+        <div class='listing-text'>
+          <div class='listing-title' i18n='settings.knownIssues'></div>
+        </div>
+        <svg class='punch-out-icon'>
+          <use xlink:href='svg/punch-out.svg#punch-out'></use>
+        </svg>
+      </div>
+    </div>
+    <div class='listing-buffer'></div>
+  </ion-content>
+</ion-view>
+<navigation-button class='navigation-button-white' state='home'></navigation-button>

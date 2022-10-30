@@ -1,0 +1,36 @@
+<ion-view class='background-brand-primary'>
+  <ion-content class='create-account-content'>
+    <svg class='sign-in-icon'>
+      <use xlink:href='svg/profile.svg#profile'></use>
+    </svg>
+    <div class='sign-in-header' i18n='authentication.creatAccountView'></div>
+    <div class='sign-in-view-switcher' i18n='authentication.login' ng-click='signInAction()'></div>
+    <form class='create-account-form' name='createAccountForm' ng-submit='createAccountForm.$valid &amp;&amp; login()' novalidate>
+      <div ng-init='setForm(createAccountForm)'></div>
+      <div class='input-container create-account-name-container'>
+        <input autocapitalize='off' autocomplete='off' autocorrect='off' class='create-account-name-input' name='uName' ng-change='handleFormChange()' ng-model-options='{debounce: 250}' ng-model='user.name' placeholder="{{ 'authentication.name' | i18n }}" required='' type='text'>
+      </div>
+      <div class='input-container create-account-email-container'>
+        <input autocapitalize='off' autocomplete='off' autocorrect='off' class='create-account-email-input' name='uEmail' ng-change='handleFormChange()' ng-model-options='{debounce: 250}' ng-model='user.email' placeholder="{{ 'authentication.emailAddress' | i18n }}" required='' type='email'>
+      </div>
+      <div class='input-container has-button create-account-password-container'>
+        <input autocapitalize='off' autocomplete='off' autocorrect='off' class='create-account-password-input' name='uPassword' ng-change='handleFormChange()' ng-model-options='{debounce: 250}' ng-model='user.password' placeholder="{{ 'authentication.password' | i18n }}" required='' type="{{isPasswordShowing ? 'text' : 'password'}}">
+        <input-password-visibility></input-password-visibility>
+      </div>
+      <div class='create-account-lower-third'>
+        <input class='create-account-button' id='sign-in-button' ng-class='buttonClass' ng-click='buttonAction()' type='submit' value="{{ 'authentication.createAccount' | i18n }}">
+        <div class='sign-in-or' i18n='authentication.signInOr'></div>
+        <button class='style-rounded sign-in-button-facebook' id='facebook' ng-click='handleClickFacebook()'>
+          <h5 i18n='authentication.connectWithFacebook'></h5>
+          <svg class='facebook-icon'>
+            <use xlink:href='svg/facebook.svg#facebook'></use>
+          </svg>
+        </button>
+        <div class='create-account-legal-container'>
+          <span ng-bind-html='legal'></span>
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
+<navigation-button color='textPrimary' state='back'></navigation-button>

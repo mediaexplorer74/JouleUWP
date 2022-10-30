@@ -1,0 +1,15 @@
+<div class='alert-header' ng-class='headerColor'>
+  <svg class='joule-alert-icon'>
+    <use xlink:href='{{iconUrl}}'></use>
+  </svg>
+</div>
+<div class='alert-content'>
+  <div class='alert-title'>{{titleString}}</div>
+  <div class='alert-body' ng-repeat='action in actions'>
+    <div class='action-link' ng-click='action.clicked()'>{{action.text}}</div>
+  </div>
+  <div class='link' ng-show='link.uri'>
+    <div class='alert-link' ng-click='linkClicked()' ng-show='!linkLoading'>{{link.string}}</div>
+    <ion-spinner class='spinner' icon='crescent' ng-show='linkLoading'></ion-spinner>
+  </div>
+</div>

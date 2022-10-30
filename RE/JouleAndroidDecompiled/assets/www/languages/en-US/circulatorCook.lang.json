@@ -1,0 +1,13 @@
+{
+  "clear": "CLEAR",
+  "bathPreheatMessage": "Bath ready in",
+  "cookTimer": "Cooking",
+  "recommended": "Recommended",
+  "seeTips": "View Tips",
+  "setTemperatureTitle": "Set temperature to",
+  "gestureHint": "Swipe for °C / °F",
+  "changeTempHint": "Tap to change temperature.",
+  "changeTempHintGuided": "Tap to change doneness.",
+  "bathReady": "Your water has heated!",
+  "addFood": "Add food whenever you like."
+}

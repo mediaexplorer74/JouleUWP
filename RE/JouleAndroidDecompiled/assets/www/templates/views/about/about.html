@@ -1,0 +1,22 @@
+<menu-button class='menu-button-transparent'></menu-button>
+<ion-view class='background-black'>
+  <status-bar-spacer></status-bar-spacer>
+  <ion-content class='background-primary' scrollbar-x='false' scrollbar-y='false'>
+    <div class='settings-container'>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text' i18n='settings.versionNumber'></div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{versionNumber}}</div>
+      </div>
+    </div>
+  </ion-content>
+  <div class='settings-header-background'>
+    <div class='settings-container-header' i18n='settings.about'></div>
+  </div>
+  <bottom-gradient gradient-style='grey-gradient'></bottom-gradient>
+</ion-view>
+<navigation-button color='textPrimary' state='back'></navigation-button>

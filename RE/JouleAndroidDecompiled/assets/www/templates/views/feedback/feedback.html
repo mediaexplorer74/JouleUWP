@@ -1,0 +1,25 @@
+<menu-button class='menu-button-transparent'></menu-button>
+<ion-view class='background-black'>
+  <status-bar-spacer></status-bar-spacer>
+  <ion-content class='background-primary' scrollbar-x='false' scrollbar-y='false'>
+    <div class='feedback-container'>
+      <svg class='icon-header'>
+        <use class='large-feedback-icon' xlink:href='svg/help.svg#help'></use>
+      </svg>
+      <h3 i18n='settings.feedbackPrompt'></h3>
+      <button class='button style-bordered style-rounded' ng-click='emailBug()'>
+        <span i18n='settings.bugReport'></span>
+      </button>
+      <button class='button style-bordered style-rounded' ng-click='emailGeneral()'>
+        <span i18n='settings.generalFeedback'></span>
+      </button>
+      <button class='button style-bordered style-rounded' ng-click='emailFeature()'>
+        <span i18n='settings.featureReq'></span>
+      </button>
+    </div>
+  </ion-content>
+  <div class='settings-header-background'>
+    <div class='settings-container-header' i18n='settings.feedback'></div>
+  </div>
+</ion-view>
+<navigation-button color='textPrimary' state='home'></navigation-button>

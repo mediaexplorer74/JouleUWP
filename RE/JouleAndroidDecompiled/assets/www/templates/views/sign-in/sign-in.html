@@ -1,0 +1,31 @@
+<ion-view>
+  <ion-content class='background-brand-primary'>
+    <svg class='sign-in-icon'>
+      <use xlink:href='svg/profile.svg#profile'></use>
+    </svg>
+    <div class='sign-in-header' i18n='authentication.login'></div>
+    <div class='sign-in-view-switcher' i18n='authentication.creatAccountView' ng-click='createAccountAction()'></div>
+    <form class='sign-in-form' name='signInForm' ng-submit='signInForm.$valid &amp;&amp; login()' novalidate>
+      <div ng-init='setForm(signInForm)'></div>
+      <div class='input-container sign-in-email-container'>
+        <input autocapitalize='off' autocomplete='off' autocorrect='off' class='sign-in-email-input' id='sign-in-email' name='uEmail' ng-change='handleFormChange()' ng-model='user.email' placeholder="{{ 'authentication.emailAddress' | i18n }}" required='' type='email'>
+      </div>
+      <div class='input-container has-button sign-in-password-container'>
+        <input autocapitalize='off' autocomplete='off' autocorrect='off' class='sign-in-password-input' id='sign-in-password' name='uPassword' ng-change='handleFormChange()' ng-model='user.password' placeholder="{{ 'authentication.password' | i18n }}" required='' type="{{isPasswordShowing ? 'text' : 'password'}}">
+        <input-password-visibility></input-password-visibility>
+      </div>
+    </form>
+    <div class='sign-in-forgot-password' i18n='authentication.questionForgotPassword' id='forgot-password' ng-click='handleForgotPasswordClick()'></div>
+    <div class='sign-in-lower-third'>
+      <input class='sign-in-button' id='sign-in-button' ng-class='buttonClass' ng-click='buttonAction()' type='submit' value='{{ buttonText | i18n }}'>
+      <div class='sign-in-or' i18n='authentication.signInOr'></div>
+      <button class='style-rounded sign-in-button-facebook' id='facebook' ng-click='handleClickFacebook()'>
+        <h5 i18n='authentication.facebookSignIn'></h5>
+        <svg class='facebook-icon'>
+          <use xlink:href='svg/facebook.svg#facebook'></use>
+        </svg>
+      </button>
+    </div>
+  </ion-content>
+</ion-view>
+<navigation-button color='textPrimary' state='back'></navigation-button>

@@ -1,0 +1,10 @@
+<div class='list'>
+  <div class='list-item' ng-repeat='item in collectionList.items'>
+    <!-- / Card Item types -->
+    <guide-card id='{{ item.id }}' ng-if="item.type === 'guide' &amp;&amp; itemStyle === 'card'"></guide-card>
+    <collection-card id='{{ item.id }}' ng-if="item.type === 'collection' &amp;&amp; itemStyle === 'card'" placeholder='{{ placeholder }}'></collection-card>
+    <!-- / Listing Item types -->
+    <collection-listing id='{{ item.id }}' ng-if="item.type === 'collection' &amp;&amp; itemStyle === 'listing'"></collection-listing>
+  </div>
+  <div class='listing-buffer' ng-if='buffer'></div>
+</div>

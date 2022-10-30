@@ -1,0 +1,26 @@
+<div class='keypad'>
+  <div class='keypad-row'>
+    <div class='keypad-button' ng-click='addValue(1)'>1</div>
+    <div class='keypad-button' ng-click='addValue(2)'>2</div>
+    <div class='keypad-button' ng-click='addValue(3)'>3</div>
+  </div>
+  <div class='keypad-row'>
+    <div class='keypad-button' ng-click='addValue(4)'>4</div>
+    <div class='keypad-button' ng-click='addValue(5)'>5</div>
+    <div class='keypad-button' ng-click='addValue(6)'>6</div>
+  </div>
+  <div class='keypad-row'>
+    <div class='keypad-button' ng-click='addValue(7)'>7</div>
+    <div class='keypad-button' ng-click='addValue(8)'>8</div>
+    <div class='keypad-button' ng-click='addValue(9)'>9</div>
+  </div>
+  <div class='keypad-row'>
+    <div class='keypad-clear' i18n='circulatorCook.clear' ng-class='{ disabled: !value }' ng-click='clear()'></div>
+    <div class='keypad-button' ng-click='addValue(0)'>0</div>
+    <div class='keypad-decimal' ng-click="addValue('.')" ng-if='!hideDecimal'>
+      <svg class='decimal-figure' viewBox='0 0 100 100'>
+        <circle cx='50' cy='50' fill='currentColor' r='50'></circle>
+      </svg>
+    </div>
+  </div>
+</div>

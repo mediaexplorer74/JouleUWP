@@ -1,0 +1,45 @@
+<menu-button class='menu-button-transparent'></menu-button>
+<ion-view class='background-black'>
+  <status-bar-spacer></status-bar-spacer>
+  <ion-content class='background-primary' scrollbar-x='false' scrollbar-y='false'>
+    <div class='settings-container'>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>{{ circulatorName }}</div>
+      </div>
+      <!-- Unpair -->
+      <div class='settings-item' ng-click='unpairCirculator()'>
+        <div class='settings-item-text' i18n='settings.unpairCirculator'></div>
+      </div>
+      <!-- Rename -->
+      <div class='settings-item' ui-sref='circulatorRename'>
+        <div class='settings-item-text' i18n='settings.rename'></div>
+      </div>
+      <!-- Firmware update -->
+      <div class='settings-item' ng-click='firmwareUpdateAction()'>
+        <div class='settings-item-text' i18n='settings.updateFirmware' ng-class="{ 'connecting': !connected }"></div>
+      </div>
+      <!-- About Device -->
+      <div class='settings-item' ui-sref='deviceAbout'>
+        <div class='settings-item-text' i18n='settings.aboutDevice'></div>
+      </div>
+      <!-- Wifi -->
+      <div class='settings-item' ng-click='accessPointAction()'>
+        <div class='settings-item-text' ng-class="{ 'connecting': isAccessPointConnecting, 'unavailable' : isAccessPointUnavailable }">
+          {{ accessPointText }}
+        </div>
+      </div>
+      <!-- Troubleshoot connection -->
+      <div class='settings-item' ui-sref='connectionTroubleshooting'>
+        <div class='settings-item-text' i18n='settings.connectionTroubleshoot'></div>
+      </div>
+    </div>
+  </ion-content>
+  <div class='settings-header-background'>
+    <div class='settings-container-header' i18n='settings.deviceSettings'></div>
+  </div>
+  <bottom-gradient gradient-style='grey-gradient'></bottom-gradient>
+</ion-view>
+<navigation-button color='textPrimary' state='back'></navigation-button>

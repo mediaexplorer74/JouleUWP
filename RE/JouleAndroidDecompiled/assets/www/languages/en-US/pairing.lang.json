@@ -1,0 +1,115 @@
+{
+  "keepName": "Keep this name!",
+  "savingName": "Saving name...",
+  "thinkAbout": "Hmm... I’ll think of a name later.",
+  "skipWifi": "Skip WiFi",
+  "pressButton": "Press the button atop Joule to get started.",
+  "confirmationHeaderPrimary": "Hold power button to start pairing.",
+  "noNetworksFound": "So, we haven’t found any networks. Yet.",
+  "successHeader": "Yay! You can start using Joule.",
+  "successButton": "Let’s get cooking.",
+  "connectToWifi": "Connect Joule to WiFi.",
+  "enterAPPassword": "Enter your password, please.",
+  "wifiPasswordPlaceholder": "Your password",
+  "upsellButton": "Meet Joule",
+  "joinAccessPoint": "Join",
+  "wifiConnecting": "Connecting Joule to WiFi",
+  "bleConnecting": "Connecting to Bluetooth",
+  "defaultCirculatorName": "Joule",
+  "otherNetworkTitle": "Join another network",
+  "otherNetworkPlaceholder": "Network name",
+  "securityType": "Security",
+
+  "namingDefault": "Keep this name",
+  "namingInvalid": "Enter a name",
+  "namingProgress": "Saving name...",
+  "namingValid": "Save new name",
+  "namingSuccess": "Name saved!",
+
+  "prePairingButtonPrimary": "Connect to Joule",
+  "prePairingPrompt1": "Grab a pot.",
+  "prePairingPrompt2": "Add warm water.",
+  "prePairingPrompt3": "Put Joule in the pot.",
+
+  "circulatorSelectionHeaderPrimary": "Get Started With Joule",
+  "circulatorSelectionHeaderSecondary": "Tap the button below to connect Joule.",
+  "circulatorSelectionButtonPrimary": "Connect",
+  "circulatorSelectionButtonSecondary": "Cancel",
+
+  "namingErrorHeaderPrimary": "Naming Failed",
+  "namingErrorHeaderSecondary": "Dang. We were unable to name your Joule!",
+  "namingErrorButtonMain": "Try again",
+  "namingErrorButtonSecondary": "Never mind",
+
+  "renameHeaderPrimary": "Let’s Get Personal",
+  "renameHeaderSecondary": "Name your Joule.",
+  "renameButtonSecondaryActive": "Save. That. Name!",
+  "renameButtonSecondaryInactive": "Keep this name",
+
+  "wifiScanning": "Scanning for networks...",
+  "password": "Password",
+
+  "wifiInformationHeaderPrimary": "Why should I connect Joule to WiFi?",
+  "wifiInformationBody": "Connecting Joule to your home WiFi network means you’ll get notifications when your water is hot and your food is ready, and it will let you control the device remotely when you’re out. \n\n If you don’t connect to WiFi, you will still be able to control Joule over Bluetooth.",
+  "wifiInformationButtonSecondary": "Got It!",
+  "selectWifiNetwork": "Select a WiFi network for Joule.",
+  "notPaired": "You are not connected to Joule.",
+
+  "wifiUpsellHeaderPrimary": "Sure you don’t wanna connect to WiFi?",
+  "wifiUpsellBody": "Connecting to WiFi lets Joule notify you when important stuff happens (water’s heated, food’s cooked), and it also lets you control your device remotely. Don’t you want to cook from anywhere?",
+  "wifiUpsellButtonPrimary": "Let's do it.",
+  "wifiUpsellButtonSecondary": "Skip WiFi",
+
+  "disconnectWifiTitle": "Disconnect Joule From WiFi",
+  "disconnectWifiDescription": "Are you sure you want to disconnect Joule from WiFi?",
+  "disconnectWifiFailedDescription": "We couldn’t disconnect Joule from WiFi. Please try again.",
+
+  "SuccessPrompt": "Success! Let’s turn Joule on.",
+  "SuccessPromptMessage": "Now that Joule is connected, let’s learn how to turn Joule on and off. We’ll heat the water to 120 °F.",
+  "SuccessPromptButton": "Let’s do it!",
+  "tapToConnect": "Tap the button to connect your Joule.",
+
+  "trainingStartCookTitle": "This is your power button.",
+  "trainingStartCookDescription": "You can tap this icon to set Joule to any temperature. Let’s give it a whirl.",
+  "trainingCookCircleTitle": "You turned Joule on!",
+  "trainingCookCircleDescription": "This circle lets you monitor Joule as it preheats. The top number is the target water temperature. The lower number is the water’s current temperature.",
+  "trainingCookCircleButton": "Show me more!",
+  "trainingStopCookTitle": "Now let’s turn Joule off.",
+  "trainingStopCookDescription": "Once you’ve finished cooking, you can turn Joule off by tapping the power button again. Give it a try!",
+  "trainingSuccessTitle": "Congrats, you’re ready to cook!",
+  "trainingSuccessDescription": "Now that you know how to set the water temperature, you can cook any food sous vide. Don’t know the temperature you want? Go to the guides and use Visual Doneness to pick the result that looks the most delicious!",
+
+  "jouleFoundPrompt": "Joule is so ready to connect.",
+
+  "firmwareUpdateAvailablePrompt": "Firmware update available.",
+
+  "weDidNotFindAnyCirculatorsTitle": "Here’s What’s Up",
+  "weDidNotFindAnyCirculators": "We did not find any Joules.",
+  "circulatorIsNotConnectableTitle": "Joule is in use",
+  "circulatorIsNotConnectableDescription": "Sorry, the Joule you have selected is currently being used by another device.",
+  "reScan": "Rescan",
+
+  "scan": "Scan",
+  "connecting": "Connecting...",
+
+  "sorryTitle": "Sorry about this but...",
+  "unpairingFailedDescription": "We couldn’t disconnect yer Joule.",
+  "areYouSureYouWantTo": "Are you sure you want to disconnect Joule?",
+  "heyThere": "Hey there!",
+  "tryAgain": "Try again",
+  "scanAgain": "Scan again",
+
+  "pairingFailedTitle": "Pairing Failed",
+  "pairingFailedDescription": "We couldn't pair with Joule. Please try again.",
+  "pairingSuccessTitle": "Boom! Success. ",
+  "pairingSuccessDescription": "Yay, you have paired with Joule! Best friends forever!",
+
+  "skipTutorial": "Skip Tutorial",
+  "completeTutorial": "I’ve got it!",
+  "startCooking": "Start Cooking!",
+  "connectToJoule": "Connect to Joule",
+  "jouleInUse": "Joule in use",
+
+  "signInToUseJouleTitle": "You need to sign in first.",
+  "signInToUseJouleDescription": "Please sign in or create an account in order to pair with Joule."
+}

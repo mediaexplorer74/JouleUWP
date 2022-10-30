@@ -1,0 +1,14 @@
+<ion-view>
+  <div class='orange-background'></div>
+  <svg class='welcome-joule-logo'>
+    <use xlink:href='svg/jouleLogo.svg#jouleLogo'></use>
+  </svg>
+  <svg class='welcome-detailed-joule'>
+    <use xlink:href='svg/detailed-joule.svg#detailed-joule'></use>
+  </svg>
+  <div class='welcome-lower-third'>
+    <button class='style-rounded color-brand welcome-sign-in-button' i18n='authentication.login' id='welcome-sign-in' ui-sref='signIn'></button>
+    <button class='style-rounded welcome-create-account-button' i18n='authentication.createAccount' ui-sref='createAccount'></button>
+    <button class='welcome-skip-sign-in-button' i18n='authentication.skipSignIn' ng-click='skipSignIn()'></button>
+  </div>
+</ion-view>

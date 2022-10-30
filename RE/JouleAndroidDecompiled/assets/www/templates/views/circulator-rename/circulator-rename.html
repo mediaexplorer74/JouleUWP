@@ -1,0 +1,16 @@
+<menu-button class='menu-button-transparent'></menu-button>
+<ion-view class='background-black'>
+  <status-bar-spacer></status-bar-spacer>
+  <ion-content class='background-primary'>
+    <div class='rename-container'>
+      <form class='rename-form'>
+        <input autocapitalize='off' autocomplete='off' autocorrect='off' class='text-center' maxlength='10' ng-change='onInputChange(newName)' ng-model='newName' type='text'>
+        <button ng-class='buttonClass' ng-click='buttonAction()' type='submit'>{{buttonText}}</button>
+      </form>
+    </div>
+  </ion-content>
+  <div class='settings-header-background'>
+    <div class='settings-container-header' i18n='settings.renameHeader'></div>
+  </div>
+</ion-view>
+<navigation-button state='back'></navigation-button>

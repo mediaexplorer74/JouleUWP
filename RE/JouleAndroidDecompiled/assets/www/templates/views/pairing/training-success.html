@@ -1,0 +1,10 @@
+<ion-view class='training-success'>
+  <background-video autoplay poster-slug='{{ ::step.image }}' video-slug='{{ ::step.video }}'>
+    <div class='large-gradient'></div>
+  </background-video>
+  <div class='bottom-button-content'>
+    <div class='bottom-title' i18n='pairing.trainingSuccessTitle'></div>
+    <div class='text-description' i18n='pairing.trainingSuccessDescription'></div>
+  </div>
+  <button class='style-rounded color-brand bottom-button' i18n='pairing.startCooking' ng-click='buttonAction()'></button>
+</ion-view>

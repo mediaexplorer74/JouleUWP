@@ -1,0 +1,23 @@
+<ion-view class='background-black'>
+  <status-bar-autohide scroll-delegate-handle='homeScroll'></status-bar-autohide>
+  <ion-content class='background-primary' delegate-handle='homeScroll' has-bouncing='true' overflow-scroll='{{isOverflowScrollEnabled}}' scrollbar-x='false' scrollbar-y='false'>
+    <advertisement any-joule-seen='{{anyJouleSeen}}' medium='appBanner' slot='homeHero'></advertisement>
+    <div class='category-title'>
+      <h6 i18n='home.guideTitle'></h6>
+    </div>
+    <collection-list class='side-card' item-style='card' slug='home-collections'></collection-list>
+    <div class='category-title'>
+      <h6 i18n='home.categories'></h6>
+    </div>
+    <collection-list class='overlay-card three-col' item-style='card' slug='home-filters'></collection-list>
+  </ion-content>
+</ion-view>
+<div class='training-overlay color-white' ng-if='isTraining'>
+  <div class='training-skip' i18n='pairing.skipTutorial' ng-click='skipTutorial()'></div>
+  <div class='training-text'>
+    <div class='training-title' i18n='pairing.trainingStartCookTitle'></div>
+    <div class='training-description' i18n='pairing.trainingStartCookDescription'></div>
+  </div>
+</div>
+<menu-button class='menu-button-white' scroll-delegate-handle='homeScroll'></menu-button>
+<floating-action-button action='buttonAction()' dismiss='dismissAction()' id='joule-button' ng-class="{'pulse-scale': isTraining}" state='buttonState'></floating-action-button>

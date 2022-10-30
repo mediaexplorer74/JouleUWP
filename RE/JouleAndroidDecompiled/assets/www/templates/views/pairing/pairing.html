@@ -1,0 +1,29 @@
+<ion-view class='background-primary' on-swipe-left='selectNextCandidate()' on-swipe-right='selectPreviousCandidate()'>
+  <div class='text-sub-header text-center'>
+    <div class='top-title' i18n='pairing.circulatorSelectionHeaderPrimary'></div>
+    <div class='text-description' i18n='pairing.circulatorSelectionHeaderSecondary'></div>
+  </div>
+  <div class='circulator-carousel' style='-webkit-transform: translateX(-{{ candidates.indexOf(selectedCandidate) * circulatorWidth }}px);'>
+    <div class='circulator-carousel-item' name='{{ candidate.name }}' ng-class='{ selected: candidate === selectedCandidate }' ng-click='selectCandidate(candidate); fooIndex = $index' ng-repeat='candidate in candidates'>
+      <svg class='circulator-carousel-item-svg'>
+        <use xlink:href='svg/circulator.svg#circulator'></use>
+      </svg>
+      <div class='circulator-carousel-item-name'>{{ candidate.name }}</div>
+      <div class='circulator-carousel-connect-button' i18n='pairing.circulatorSelectionButtonPrimary' id='pair-button' ng-class="{ 'show-connect-button': candidate === selectedCandidate }" ng-click='pairCandidate(selectedCandidate)' ng-if='!candidate.isConnected'></div>
+      <div class='circulator-carousel-connect-button' i18n='pairing.jouleInUse' id='pair-button' ng-class="{ 'show-connect-button': candidate === selectedCandidate, 'joule-in-use' : candidate.isConnected }" ng-click='pairCandidate(selectedCandidate)' ng-if='candidate.isConnected'></div>
+    </div>
+    <div class='scan-again-button' ng-click='scanAgainAction()'>
+      <svg class='refresh-icon'>
+        <use xlink:href='svg/refresh.svg#refresh'></use>
+      </svg>
+      <div class='scan-again-button-title' i18n='pairing.reScan'></div>
+    </div>
+  </div>
+  <close-button action='onCloseButtonClick()' color='textPrimary' state='cancel'></close-button>
+  <div class='pairing-overlay' ng-if='pairingStarted'>
+    <background-video autoplay background-color='transparent' disable-loop='true' disable-placeholder='true' hide-controls='true' instance='backgroundVideoInstance' poster-slug='./images/pairing.jpg' video-slug='./videos/pairing.mp4'></background-video>
+    <div class='text-sub-header text-center'>
+      <div class='top-title'>{{ pairingHeaderMessage }}</div>
+    </div>
+  </div>
+</ion-view>

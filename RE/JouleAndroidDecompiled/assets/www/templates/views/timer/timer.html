@@ -1,0 +1,43 @@
+<ion-view class='background-brand-primary'>
+  <status-bar-spacer></status-bar-spacer>
+  <div class='flex-view'>
+    <!-- The running timer -->
+    <timer ng-if='shouldShowTimer' timer='timer'></timer>
+    <!-- The time display for keypad input -->
+    <div class='timer-header' ng-show='shouldShowKeypad'>
+      <div class='timer-entry'>
+        <div class='timer-entry-hours'>
+          <span>{{ hours || '00' }}</span>
+        </div>
+        <div class='timer-entry-divider' i18n='time.hoursTimeLabel'></div>
+        <div class='timer-entry-minutes'>
+          <span>{{ minutes || '00' }}</span>
+        </div>
+        <div class='timer-entry-divider' i18n='time.minutesTimeLabel'></div>
+      </div>
+    </div>
+    <div class='flex-view-content'>
+      <!-- Keypad entry -->
+      <div class='keypad-container' ng-show='shouldShowKeypad'>
+        <keypad class='timer-keypad color-white' hide-decimal='true' on-value-updated='setKeypadValue(value)' value='keypadValue'></keypad>
+      </div>
+      <!-- Reset button -->
+      <div class='timer-update-container' ng-show='shouldShowTimer'>
+        <div class='circle-button timer-reset' ng-class="{ 'reset-disabled' : resetButtonDisabled }" ng-click='resetTimer()'>
+          <div class='timer-action-text reset' i18n='time.resetLabel'></div>
+        </div>
+      </div>
+    </div>
+    <div class='timer-bottom-banner'>
+      <!-- Set a timer -->
+      <div class='final-time-instruction' i18n='time.setCookTimer' ng-class="{'shake' : shake}" ng-if='!keypadValue &amp;&amp; shouldShowKeypad'></div>
+      <!-- Start  now -->
+      <div class='final-time-instruction' i18n='time.startTimerInstruction' ng-if='keypadValue &amp;&amp; shouldShowKeypad'></div>
+      <!-- Timer is running -->
+      <div class='final-time-instruction' i18n='time.running' ng-if='shouldShowTimer'></div>
+    </div>
+    <div class='flex-view-footer'></div>
+  </div>
+</ion-view>
+<floating-action-button action='buttonAction()' ng-click='shakeMe()' ng-if='shouldShowKeypad' state='buttonState'></floating-action-button>
+<navigation-button color='textPrimary' state='back'></navigation-button>

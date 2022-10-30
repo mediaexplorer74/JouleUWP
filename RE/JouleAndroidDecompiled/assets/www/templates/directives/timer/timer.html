@@ -1,0 +1,21 @@
+<div class='timer' ng-if='timer'>
+  <div class='timer-header' ng-class="{ 'running' : timer.isStarted() == true }">
+    <div class='humanized-time' ng-if='!timer.isStarted()'>{{ humanizeTime }}</div>
+    <div class='timer-display' ng-if='timer.getRemainingTime() &gt; 0' ng-show='timer.isStarted()'>
+      <div class='timer-numbers' ng-class="{ 'timer-numbers-paused': timer.isPaused() } ">
+        <div class='timer-entry-hours' ng-if='showHour()'>
+          <span>{{ timer.getDisplayHours() }}</span>
+        </div>
+        <div class='timer-entry-divider' i18n='time.hoursTimeLabel' ng-if='showHour()'></div>
+        <div class='timer-entry-minutes'>
+          <span>{{ timer.getDisplayMinutes() }}</span>
+        </div>
+        <div class='timer-entry-divider' i18n='time.minutesTimeLabel'></div>
+        <div class='timer-entry-minutes' ng-if='timer.isStarted()'>
+          <span>{{ timer.getDisplaySeconds() }}</span>
+        </div>
+        <div class='timer-entry-divider last' i18n='time.secondsTimeLabel' ng-if='timer.isStarted()'></div>
+      </div>
+    </div>
+  </div>
+</div>

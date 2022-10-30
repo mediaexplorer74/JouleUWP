@@ -1,0 +1,7 @@
+<svg id="collection" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 26 22.7" viewBox="0 0 26 22.7" xml:space="preserve">
+  <g>
+    <path fill="currentColor" class="a" d="M22.76,22.65H10.71a1,1,0,0,1-1-1V9.59a1,1,0,0,1,1-1H22.76a1,1,0,0,1,1,1V21.65A1,1,0,0,1,22.76,22.65Zm-11.05-2H21.76V10.59H11.71V20.65Z"/>
+    <path fill="currentColor" class="a" d="M10.71,18.68h-4a1,1,0,0,1-1-1V5.62a1,1,0,0,1,1-1H18.79a1,1,0,0,1,1,1v4a1,1,0,1,1-2,0v-3H7.74V16.68h3A1,1,0,0,1,10.71,18.68Z"/>
+    <path fill="currentColor" class="a" d="M6.6,14.7H2.76a1,1,0,0,1-1-1V1.65a1,1,0,0,1,1-1H14.82a1,1,0,0,1,1,1V5.48a1,1,0,0,1-2,0V2.65H3.76V12.7H6.6A1,1,0,0,1,6.6,14.7Z"/>
+  </g>
+</svg>

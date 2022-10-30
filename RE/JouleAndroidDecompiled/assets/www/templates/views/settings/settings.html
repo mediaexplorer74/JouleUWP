@@ -1,0 +1,61 @@
+<menu-button class='menu-button-transparent'></menu-button>
+<ion-view class='background-black'>
+  <status-bar-spacer></status-bar-spacer>
+  <ion-content class='background-primary' scrollbar-x='false' scrollbar-y='false'>
+    <div class='settings-container'>
+      <div class='settings-header' ng-if='user'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text' i18n='settings.devices'></div>
+      </div>
+      <div class='settings-item' ng-if='isPaired &amp;&amp; user' ui-sref='deviceSettings'>
+        <div class='settings-item-text' i18n='settings.deviceSettings'></div>
+      </div>
+      <div class='settings-item' ng-if='isConnecting &amp;&amp; user'>
+        <div class='settings-item-text connecting' i18n='pairing.connecting'></div>
+      </div>
+      <div class='settings-item' ng-click='handleClickPair()' ng-if='isUnpaired &amp;&amp; user'>
+        <div class='settings-item-text' i18n='pairing.connectToJoule'></div>
+      </div>
+      <div class='settings-divider' ng-if='user'></div>
+      <div class='settings-header' ng-click='handleClickAccountHeader()'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/profile.svg#profile'></use>
+        </svg>
+        <div class='settings-header-text' i18n='settings.account'></div>
+      </div>
+      <div class='settings-item' ng-if='user' ui-sref='profile'>
+        <div class='settings-item-text' i18n='settings.viewProfile'></div>
+      </div>
+      <div class='settings-item' ng-click='handleClickDefaultTempUnit()'>
+        <div class='settings-item-text' i18n='settings.defaultTemperatureUnit'></div>
+      </div>
+      <div class='settings-item' ng-click='handleClickVideoSettings()'>
+        <div class='settings-item-text' i18n='settings.videoSettings'></div>
+      </div>
+      <div class='settings-item' ng-click='handleClickDataUsage()' ng-if='enableVideo'>
+        <div class='settings-item-text' i18n='settings.dataUsage'></div>
+      </div>
+      <div class='settings-divider'></div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon legal-icon'>
+          <use xlink:href='svg/legal.svg#legal'></use>
+        </svg>
+        <div class='settings-header-text' i18n='settings.legal'></div>
+      </div>
+      <div class='settings-item' ui-sref='legal'>
+        <div class='settings-item-text' i18n='settings.legalInformation'></div>
+      </div>
+      <div class='settings-divider'></div>
+      <div class='settings-item' ui-sref='about'>
+        <div class='settings-item-text' i18n='settings.about'></div>
+      </div>
+    </div>
+  </ion-content>
+  <bottom-gradient gradient-style='grey-gradient'></bottom-gradient>
+  <navigation-button class='navigation-button' state='home'></navigation-button>
+  <div class='settings-header-background'>
+    <div class='settings-container-header' i18n='settings.settings'></div>
+  </div>
+</ion-view>

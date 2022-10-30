@@ -1,0 +1,212 @@
+<menu-button class='menu-button-transparent'></menu-button>
+<ion-view class='background-black'>
+  <status-bar-spacer></status-bar-spacer>
+  <ion-content class='background-primary' overflow-scroll='{{isOverflowScrollEnabled}}' scrollbar-x='false' scrollbar-y='false'>
+    <div class='settings-container'>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Simulation</div>
+      </div>
+      <div class='settings-header'>
+        <div class='settings-item' ng-click='toggleAppSimulation()'>
+          <div class='settings-item-text'>
+            <span ng-if='isSimulating'>Disable App Simulator</span>
+            <span ng-if='!isSimulating'>Enable App Simulator</span>
+          </div>
+        </div>
+      </div>
+      <div class='settings-header'>
+        <div class='settings-item' ng-click='toggleFirmwareSimulation()'>
+          <div class='settings-item-text'>
+            <span ng-if='isFirmwareSimulating'>Disable Firmware Simulator</span>
+            <span ng-if='!isFirmwareSimulating'>Enable Firmware Simulator</span>
+          </div>
+        </div>
+      </div>
+      <div class='settings-header'>
+        <div class='settings-item' ng-click='updateGuideManifestEndpoint()'>
+          <div class='settings-item-text'>
+            <span>Update Guide Manifest Endpoint</span>
+          </div>
+        </div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Utilities</div>
+      </div>
+      <div class='settings-header'>
+        <div class='settings-item'>
+          <div class='settings-item-text' ng-click='postLogFile()'>Post Logs</div>
+        </div>
+      </div>
+      <div class='settings-header'>
+        <div class='settings-item' ng-click='clearAssetCache()'>
+          <div class='settings-item-text'>
+            <span>Clear Image & Video Cache</span>
+          </div>
+        </div>
+      </div>
+      <div class='settings-header'>
+        <div class='settings-item' ng-click='toggleDfuAutocheck()'>
+          <div class='settings-item-text'>
+            <span ng-if='dfuAutocheckEnabled'>Disable DFU Autocheck</span>
+            <span ng-if='!dfuAutocheckEnabled'>Enable DFU Autocheck</span>
+          </div>
+        </div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>App Version</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ versionNumber || 'No version available' }}</div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Guide Manifest Endpoint</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ guideManifestEndpoint || 'Guide manifest endpoint not set' }}</div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Circulator Name</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ circulatorName || 'No name available' }}</div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Repo Head</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ headRef || 'No ref available' }}</div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Build Flavor</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ buildFlavor || 'No build flavor available' }}</div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Commit Hash</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ commitHash || 'No commit hash available' }}</div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Firmware Version</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ firmwareVersion || 'No firmware version available' }}</div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Hardware Version</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ circulatorHardwareVersion || 'No hardware version available' }}</div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Circulator Serial Number</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ circulatorSerialNumber || 'No serial number available' }}</div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Platform</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ platform || 'No platform available' }}</div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Platform Version</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ platformVersion || 'No platform version available' }}</div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Softdevice Version</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ softdeviceVersion || 'No softdevice version available' }}</div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Bootloader Version</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ bootloaderVersion || 'No bootloader version available' }}</div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>App Firmware Version</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ appFirmwareVersion || 'No app firmware version available' }}</div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Esp Firmware Version</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ espFirmwareVersion || 'No esp firmware version available' }}</div>
+      </div>
+      <div class='settings-header'>
+        <svg class='settings-header-icon'>
+          <use xlink:href='svg/cog.svg#cog'></use>
+        </svg>
+        <div class='settings-header-text'>Certificate Version</div>
+      </div>
+      <div class='settings-item'>
+        <div class='settings-item-text'>{{ certificateVersion || 'No certificate version available' }}</div>
+      </div>
+    </div>
+  </ion-content>
+  <bottom-gradient gradient-style='grey-gradient'></bottom-gradient>
+  <div class='settings-header-background'>
+    <div class='settings-container-header' i18n='settings.developerSettings'></div>
+  </div>
+</ion-view>
+<navigation-button color='textPrimary' state='home'></navigation-button>

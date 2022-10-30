@@ -1,0 +1,21 @@
+<div ng-if='! stepsOnly'>
+  <ion-view class='background-black'>
+    <div class='collection-header'>
+      <div class='collection-title-container'>
+        <h1 class='collection-title'>{{ collection.title }}</h1>
+      </div>
+    </div>
+    <ion-content class='collection-content background-primary' delegate-handle='contentScroll' has-bouncing='true' overflow-scroll='{{isOverflowScrollEnabled}}' scrollbar-x='false' scrollbar-y='false'>
+      <collection-list class='two-col' item-style='card' slug='{{collectionSlug}}'></collection-list>
+    </ion-content>
+  </ion-view>
+  <menu-button class='menu-button-transparent' scroll-delegate-handle='contentScroll'></menu-button>
+  <floating-action-button action='buttonAction()' dismiss='dismissAction()' id='joule-button' state='buttonState'></floating-action-button>
+  <navigation-button class='navigation-button-white' state='back'></navigation-button>
+</div>
+<div class='step-modal' ng-if='stepsOnly'>
+  <ion-view class='background-dark'>
+    <steps-carousel steps='steps'></steps-carousel>
+    <close-button state='x'></close-button>
+  </ion-view>
+</div>

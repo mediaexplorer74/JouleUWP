@@ -1,0 +1,15 @@
+<ion-modal-view class='translucent-modal'>
+  <ion-content>
+    <div class='guide-overview-modal-body'>
+      <div class='guide-overview-title'>{{ guide.title }}</div>
+      <div class='guide-overview-time'>
+        <svg class='timer-icon'>
+          <use xlink:href='svg/time-small.svg#time-small'></use>
+        </svg>
+        <div class='estimate'>{{ ::guide.duration }}</div>
+      </div>
+      <div class='guide-overview-modal-description'>{{ ::guide.description }}</div>
+    </div>
+  </ion-content>
+  <close-button action='closeModal()' state='x-black'></close-button>
+</ion-modal-view>

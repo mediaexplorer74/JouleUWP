@@ -1,0 +1,11 @@
+<ion-view>
+  <background-video autoplay poster-slug='./images/notifications.jpg' video-slug='./videos/notifications.mp4'>
+    <div class='large-gradient'></div>
+  </background-video>
+  <div class='bottom-button-content'>
+    <div class='bottom-title' i18n='onboarding.notificationsHeaderPrimary'></div>
+    <div class='text-description' i18n='onboarding.notificationsHeaderSecondary'></div>
+  </div>
+  <button class='style-rounded color-brand bottom-button' i18n='onboarding.notificationsButtonPrimary' ng-click='enableNotifications()' ng-if='!notificationsSet'></button>
+  <button class='style-rounded color-brand bottom-button' i18n='onboarding.notificationsButtonNext' ng-click='onNextButtonClick()' ng-if='notificationsSet'></button>
+</ion-view>

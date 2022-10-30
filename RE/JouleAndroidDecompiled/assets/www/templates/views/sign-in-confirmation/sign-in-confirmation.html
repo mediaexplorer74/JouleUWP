@@ -1,0 +1,16 @@
+<ion-view class='background-primary'>
+  <ion-content scroll='false'>
+    <h3 class='text-center text-header' i18n='authentication.welcome'></h3>
+    <div class='profile-container'>
+      <div class='profile-card profile-card-short profile-card-confirmation'>
+        <img class='profile-image' ng-src='{{signInConfirmation.imageUrl}}'>
+        <div class='profile-card-bottom profile-card-bottom-short'>
+          <div class='profile-name'>{{signInConfirmation.name}}</div>
+          <div class='profile-email'>
+            <span i18n='authentication.premiumMember'></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

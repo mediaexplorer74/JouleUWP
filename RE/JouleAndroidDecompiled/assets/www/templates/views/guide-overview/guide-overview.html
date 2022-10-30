@@ -1,0 +1,40 @@
+<div class='overview-page-header' ng-class="{'steps-list-active ' :  stepsSelected}">
+  <div class='overview-page-view-pager' ng-class="{'steps-list-active ' :  stepsSelected}">
+    <div class='overview-view-pager' i18n='general.overview' ng-class="{ 'unselected' : stepsSelected  }" ng-click='slider.slidePrev()'></div>
+    <div class='overview-page-steps-view-pager' i18n='general.steps' ng-class="{ 'unselected' : stepsSelected }" ng-click='slider.slideNext()'></div>
+    <div class='overview-page-indicator' ng-class="{'steps-selected' : stepsSelected }"></div>
+  </div>
+</div>
+<ion-slides ng-class="{ 'tease' : swipeTease }" options='sliderOptions' slider='slider'>
+  <ion-slide-page>
+    <ion-view>
+      <div class='overview-header-background-gradient'></div>
+      <background-video autoplay class='overview-page-video' disable-video='disableOverviewVideo || !videoEnabled' ng-if='guide' poster-slug='{{ getGuideOverviewImage() }}' video-slug='{{ ::guide.video }}'>
+        <div class='large-gradient'></div>
+      </background-video>
+      <div class='guide-overview-container'>
+        <div class='guide-overview-body'>
+          <div class='guide-overview-title'>{{ guide.title | limitTo:100 }}</div>
+          <div class='guide-overview-time'>
+            <svg class='timer-icon'>
+              <use xlink:href='svg/time-small.svg#time-small'></use>
+            </svg>
+            <div class='estimate'>{{ ::guide.duration }}</div>
+          </div>
+          <div class='guide-overview-description' ng-class="{ 'read-more' : guide.description.length &gt; 220 }">{{ ::guide.description | limitTo:220 }}</div>
+          <span class='guide-overview-description-readmore' i18n='general.readMore' ng-click='onReadMoreClick()' ng-if='guide.description.length &gt; 220'></span>
+        </div>
+      </div>
+    </ion-view>
+  </ion-slide-page>
+  <ion-slide-page>
+    <steps-list id='{{guide.id}}' program='program' steps='guide.steps'></steps-list>
+  </ion-slide-page>
+</ion-slides>
+<div class='icon-button' ng-click='nextAction()'>
+  <span i18n='general.setTemp'></span>
+  <svg class='icon-spanner-right icon-button-spanner'>
+    <use xlink:href='svg/spanner.svg#spanner'></use>
+  </svg>
+</div>
+<navigation-button class='navigation-button-white' ng-class="{ 'hidden' : stepsSelected }" state='back'></navigation-button>

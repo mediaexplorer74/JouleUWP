@@ -1,0 +1,20 @@
+<div class='alert-header short' ng-class='headerColor'>
+  <svg class='joule-alert-icon'>
+    <use xlink:href='{{iconUrl}}'></use>
+  </svg>
+</div>
+<div class='alert-content'>
+  <div class='alert-title'>{{titleString}}</div>
+  <div class='alert-body'>{{bodyString}}</div>
+  <input autocapitalize='none' autocorrect='off' class='alert-prompt' ng-change="inputChanged(ssidValue, 'ssid')" ng-if='hasInput' ng-model='ssidValue' placeholder='{{inputPlaceholder}}' type='{{inputType}}'>
+  <div class='input-container has-button alert-prompt' ng-if='securityTypeValue'>
+    <input ng-change="inputChanged(passwordValue, 'password')" ng-model='passwordValue' placeholder='{{passwordInputPlaceholder}}' type='password'>
+    <input-password-visibility></input-password-visibility>
+  </div>
+  <div class='alert-body' i18n='pairing.securityType'></div>
+  <select ng-change="inputChanged(securityTypeValue, 'securityType')" ng-model='securityTypeValue'>
+    <option value=''>None</option>
+    <option value='WPA'>WPA</option>
+    <option value='WPA2'>WPA2</option>
+  </select>
+</div>

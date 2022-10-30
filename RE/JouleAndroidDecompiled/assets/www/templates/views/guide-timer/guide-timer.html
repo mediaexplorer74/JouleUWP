@@ -1,0 +1,55 @@
+<ion-view class='background-brand-primary'>
+  <status-bar-spacer></status-bar-spacer>
+  <ion-content overflow-scroll='{{isOverflowScrollEnabled}}' scrollbar-x='false' scrollbar-y='false'>
+    <div class='guide-timer-container'>
+      <div class='starting-temperature-options' ng-show='program.frozenTimes.length'>
+        <div class='guide-timer-header'>Is your food fresh or frozen?</div>
+        <div class='starting-temperature-option' ng-class="{ 'selected': temperature.id == startingTemperature.id }" ng-click='selectStartingTemperatureOption(temperature)' ng-repeat='temperature in startingTemperatures'>
+          <div class='timer-radio-button'>
+            <svg class='radio-tick'>
+              <use xlink:href='svg/tick.svg#tick'></use>
+            </svg>
+          </div>
+          <span class='starting-temp-text'>{{ temperature.title }}</span>
+        </div>
+      </div>
+      <div class='time-options' ng-class="{ 'none-selected': ! time.id ,'no-starting-temp': !program.frozenTimes }">
+        <div class='guide-timer-header'>{{ guide.timerDescription }}</div>
+        <div class='div' ng-if="startingTemperature.id === 'fresh'">
+          <div class='time-option' ng-class="{ 'selected': freshTime.id == time.id }" ng-click='selectTime(freshTime, $index)' ng-repeat='freshTime in program.freshTimes'>
+            <div class='time-option-inner'>
+              <div class='timer-radio-button'>
+                <svg class='radio-tick'>
+                  <use xlink:href='svg/tick.svg#tick'></use>
+                </svg>
+              </div>
+              <span class='time-option-title'>{{ freshTime.title }}</span>
+            </div>
+          </div>
+        </div>
+        <div class='div' ng-if="startingTemperature.id === 'frozen'">
+          <div class='time-option' ng-class="{ 'selected': frozenTime.id == time.id }" ng-click='selectTime(frozenTime, $index)' ng-repeat='frozenTime in program.frozenTimes'>
+            <div class='time-option-inner'>
+              <div class='timer-radio-button'>
+                <svg class='radio-tick'>
+                  <use xlink:href='svg/tick.svg#tick'></use>
+                </svg>
+              </div>
+              <span class='time-option-title'>{{ frozenTime.title }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <bottom-gradient gradient-style='brand-primary-gradient guide-timer'></bottom-gradient>
+  <div class='final-cook-time-container'>
+    <div class='final-time-instruction' i18n='time.selectYourTime' ng-class="{'shake' : shake}" ng-if='!time'></div>
+    <div class='final-time-header' i18n='time.yourCookTimeIs' ng-if='time'></div>
+    <div class='time-option-time' ng-if='time'>
+      <span class='final-cook-time'>{{ getEstimatedTimeString(time) }}</span>
+    </div>
+  </div>
+</ion-view>
+<floating-action-button action='buttonAction()' ng-click='shakeMe()' state='buttonState'></floating-action-button>
+<navigation-button action='backAction()' state='back'></navigation-button>

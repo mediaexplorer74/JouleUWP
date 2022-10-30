@@ -1,0 +1,7 @@
+<div class='hero' ng-click='heroLink()'>
+  <div class='hero-image' image-with-placeholder='{{ getHeroThumbnail(hero) }}'></div>
+  <div class='hero-title-container'>
+    <h1 class='hero-title' ng-class='{placeholder: placeholder}'>{{ placeholder ? 'placeholder' : hero.title }}</h1>
+    <div class='hero-cta' i18n='general.explore' ng-class='{placeholder: placeholder}'></div>
+  </div>
+</div>

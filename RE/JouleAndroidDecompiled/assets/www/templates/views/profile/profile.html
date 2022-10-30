@@ -1,0 +1,20 @@
+<menu-button class='menu-button-transparent' menu-toggle='left'></menu-button>
+<ion-view class='background-black'>
+  <status-bar-spacer></status-bar-spacer>
+  <ion-content class='background-primary' scroll='true'>
+    <div class='profile-container'>
+      <div class='profile-card'>
+        <img class='profile-image' ng-src='{{imageUrl}}'>
+        <div class='profile-card-bottom'>
+          <div class='profile-name'>{{userName}}</div>
+          <div class='profile-email'>{{email}}</div>
+          <button class='bordered-color-white style-rounded style-short' i18n='authentication.signOut' ng-click='handleClickSignOut()'></button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <div class='settings-header-background'>
+    <div class='settings-container-header' i18n='general.profile'></div>
+  </div>
+</ion-view>
+<navigation-button color='textPrimary' state='back'></navigation-button>

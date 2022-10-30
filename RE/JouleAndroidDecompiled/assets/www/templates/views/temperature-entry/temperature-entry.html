@@ -1,0 +1,30 @@
+<ion-view class='background-dark'>
+  <div class='temperature-entry-header-container'>
+    <div class='temperature-entry-value' ng-class="{'shake' : shake}">
+      <span class='integer-container'>
+        <span class='integer'>{{ getDisplayInteger(keypadValue) }}</span>
+        <span class='decimal'>{{ getDisplayDecimal(keypadValue) }}</span>
+      </span>
+    </div>
+    <div class='temperature-entry-unit-selector' ng-click='updateUnit()'>
+      <div class='temperature-entry-unit c' i18n='general.degreeC' ng-class="{'selected-c': unit === 'c'}"></div>
+      <div class='temperature-entry-unit f' i18n='general.degreeF' ng-class="{'selected-f': unit === 'f'}"></div>
+    </div>
+    <div class='current-temperature'>
+      <div class='bath-temp-title' i18n='general.currentBathTemperatureTitle'></div>
+      <div class='temperature-entry-bath-temperature'>{{ bathTemperatureWithUnit }}</div>
+    </div>
+  </div>
+  <div class='flex-view-content'>
+    <div class='temperature-entry keypad-container'>
+      <keypad class='temperature-entry-keypad' ng-class="{'fade-animation': isTraining}" on-value-updated='onKeypadValueUpdated(value)' value='keypadValue'></keypad>
+    </div>
+  </div>
+  <div class='temperature-bottom-banner'>
+    <div class='final-time-instruction' i18n='general.setATemp' ng-if='!isTraining &amp;&amp; !isReadyToStart'></div>
+    <div class='final-time-instruction' i18n='general.trainingSetATemp' ng-if='isTraining &amp;&amp; !isReadyToStart'></div>
+    <div class='final-time-instruction' i18n='general.readyToStart' ng-if='isReadyToStart'></div>
+  </div>
+</ion-view>
+<floating-action-button action='buttonAction()' state='buttonState'></floating-action-button>
+<navigation-button color='white' ng-if='!isTraining' state='back'></navigation-button>

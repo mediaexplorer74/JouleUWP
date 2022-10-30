@@ -1,0 +1,18 @@
+<div class='alert-header' ng-class='headerColor'>
+  <svg class='joule-alert-icon'>
+    <use xlink:href='{{iconUrl}}'></use>
+  </svg>
+</div>
+<div class='alert-content'>
+  <div class='alert-title'>{{titleString}}</div>
+  <div class='alert-body'>{{bodyString}}</div>
+  <div class='link' ng-show='link.uri'>
+    <div class='alert-link' ng-click='linkClicked()' ng-show='!linkLoading'>{{link.string}}</div>
+    <ion-spinner class='spinner' icon='crescent' ng-show='linkLoading'></ion-spinner>
+  </div>
+  <div class='tertiary-action' ng-click='tertiaryActionClicked()' ng-show='tertiaryActionText'>{{tertiaryActionText}}</div>
+  <div class='input-container has-button alert-prompt'>
+    <input ng-change="inputChanged(inputText, 'primary')" ng-if='hasInput' ng-keyup='$event.keyCode == 13 &amp;&amp; $buttonTapped(buttons[1], $event)' ng-model='inputText' placeholder='{{ ::inputPlaceholder }}' type='{{ ::inputType }}'>
+    <input-password-visibility ng-if="inputType == 'password'"></input-password-visibility>
+  </div>
+</div>

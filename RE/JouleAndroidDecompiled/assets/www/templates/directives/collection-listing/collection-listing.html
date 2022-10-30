@@ -1,0 +1,13 @@
+<div class='listing' ng-if='collection' ui-sref='collection({ slug: collection.slug })'>
+  <div class='listing-item item-image' image-with-placeholder='{{ getCollectionThumbnail(collection) }}'></div>
+  <div class='listing-title-container'>
+    <div class='listing-text'>
+      <div class='listing-title'>{{ collection.title }}</div>
+      <span class='listing-description'>{{ collection.description | limitTo:40 }}</span>
+      <span class='ellipsis' ng-if='collection.description.length &gt; 40'>...</span>
+    </div>
+    <svg class='listing-arrow'>
+      <use xlink:href='svg/spanner.svg#spanner'></use>
+    </svg>
+  </div>
+</div>

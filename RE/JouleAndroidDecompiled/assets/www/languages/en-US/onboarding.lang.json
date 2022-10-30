@@ -1,0 +1,15 @@
+{
+  "onboardingHeaderPrimary": "Welcome, %userName",
+  "onboardingDirections": "Watch this quick video to get started.",
+  "onboardingButtonPrimary": "Let’s go!",
+
+  "notificationsHeaderPrimary": "Care to enable notifications? ",
+  "notificationsHeaderSecondary": "Joule can notify you when the water reaches the cooking temperature, when your food’s cooked, when Beyoncé drops a surprise album, or if any issues arise.",
+  "notificationsButtonPrimary": "Heck yes. Talk to me, Joule.",
+  "notificationsButtonNext": "Next",
+
+  "prepareJouleHeaderPrimary": "Connect Joule",
+  "prepareJouleHeaderSecondary": "Make sure Joule’s plugged in and all set up in a pot with water.",
+  "prepareJouleButtonPrimary": "Let's go!",
+  "prepareJouleButtonSecondary": "Aw man. I don’t have Joule yet."
+}

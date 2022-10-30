@@ -1,0 +1,14 @@
+<div class='alert-header alert-yellow'>
+  <svg class='joule-alert-icon'>
+    <use xlink:href='svg/temp-switcher.svg#temp-switcher'></use>
+  </svg>
+</div>
+<div class='alert-content'>
+  <div class='alert-body' i18n='popup.tempSwitcherTitle'></div>
+  <ion-radio ng-model='choices.temp' ng-value="'c'">
+    <span i18n='settings.celsius'></span>
+  </ion-radio>
+  <ion-radio ng-model='choices.temp' ng-value="'f'">
+    <span i18n='settings.fahrenheit'></span>
+  </ion-radio>
+</div>

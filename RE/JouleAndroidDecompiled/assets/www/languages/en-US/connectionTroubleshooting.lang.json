@@ -1,0 +1,22 @@
+{
+  "header": "Connection Troubleshooting",
+  "instruction": "To connect Joule to your phone or tablet, please try the following:",
+  "retryButtonText": "I have tried all of the above",
+  "cancelButtonText": "Cancel",
+  "connectToNewJouleButtonText": "Connect to new Joule",
+  "scanning": "Looking for Joule....",
+  "disconnected": "You are disconnected from Joule.",
+  "connecting": "Trying to connect to Joule....",
+  "connected": "You are connected to Joule!",
+  "bluetoothGeneralDisconnectReason": "Improve your Bluetooth connection by moving phone or tablet closer to Joule.",
+  "bluetoothRestartError": "Please restart Bluetooth on your phone or tablet.",
+  "bluetoothGattFailure": "Restart the Joule app.",
+  "bluetoothCouldNotFindCirculator": "Make sure Joule is plugged in and that your phone or tablet is close to it.",
+  "bluetoothFoundOtherCirculators": "Try connecting to a different Joule. (We found another one close by.)",
+  "bluetoothOffError": "Please enable Bluetooth on your phone or tablet, then move device closer to Joule.",
+  "appOfflineDescription": "Make sure your phone or tablet is connected to the Internet.",
+  "youAreConnectedTitle": "Everything looks good!",
+  "reconnectToWifiText": "Tap here to troubleshoot WiFi.",
+  "connectToWifiUpsell": "Try connecting Joule to WiFi to optimize your experience.",
+  "moreHelpText": "Tap here for more help."
+}

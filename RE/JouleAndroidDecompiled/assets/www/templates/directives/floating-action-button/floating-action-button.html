@@ -1,0 +1,12 @@
+<div class='floating-action-button-container'>
+  <div class='floating-action-button' ng-class='classes' ng-click='action()'>
+    <div class='floating-action-button-icon' ng-class='icon' ng-if='icon' ng-include='iconUrl'></div>
+    <div class='floating-action-button-text'>{{ text }}</div>
+  </div>
+  <div class='banner' ng-class="{ 'reveal' : banner, 'disappear' : hideMe }">
+    <div class='banner-close-button' ng-click='dismissClicked()'>
+      <div class='banner-close-icon' ng-include="'svg/close.svg#close'"></div>
+    </div>
+    <div class='banner-text'>{{ banner }}</div>
+  </div>
+</div>

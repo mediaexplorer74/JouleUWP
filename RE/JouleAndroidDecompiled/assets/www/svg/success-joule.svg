@@ -1,0 +1,29 @@
+<svg id="success-joule" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" version="1.1" x="0" y="0" width="174.27" height="195.01" viewBox="0 0 174.27 195.01" enable-background="new 0 0 174.27 195.01" xml:space="preserve">
+  <path fill="currentColor" d="M158.08 88.71h-27.09c-0.28 0-0.5-0.22-0.5-0.5s0.22-0.5 0.5-0.5h27.09c8.38 0 15.19-6.81 15.19-15.19 0-5.76-3.21-10.96-8.39-13.55 -0.15-0.08-0.26-0.23-0.27-0.4 -2.08-21.87-20.24-38.37-42.24-38.37 -1.3 0-2.6 0.06-3.87 0.18 -0.16 0.02-0.33-0.05-0.43-0.18C107.93 8 93.02 1 77.17 1 53.25 1 32.15 17.12 25.88 40.19c-0.06 0.23-0.29 0.38-0.51 0.37l-0.28-0.02c-0.16-0.01-0.32-0.02-0.49-0.02C11.58 40.52 1 51.1 1 64.11c0 13.01 10.58 23.6 23.6 23.6h18.69c0.28 0 0.5 0.22 0.5 0.5s-0.22 0.5-0.5 0.5H24.6C11.03 88.71 0 77.67 0 64.11c0-13.56 11.03-24.6 24.6-24.6 0.15 0 0.29 0.01 0.43 0.02C31.55 16.23 52.93 0 77.17 0c16.06 0 31.17 7.05 41.5 19.36 1.21-0.11 2.46-0.16 3.7-0.16 22.43 0 40.95 16.75 43.21 39 5.37 2.8 8.69 8.27 8.69 14.32C174.27 81.44 167 88.71 158.08 88.71z"/>
+  <path fill="currentColor" d="M87.13 34.83c-0.28 0-0.5-0.22-0.5-0.5v-18.5c0-0.28 0.22-0.5 0.5-0.5s0.5 0.22 0.5 0.5v18.5C87.63 34.61 87.41 34.83 87.13 34.83z"/>
+  <path fill="currentColor" d="M106.37 42.8c-0.13 0-0.26-0.05-0.35-0.15 -0.2-0.2-0.2-0.51 0-0.71l13.08-13.08c0.2-0.2 0.51-0.2 0.71 0s0.2 0.51 0 0.71l-13.08 13.08C106.62 42.75 106.49 42.8 106.37 42.8z"/>
+  <path fill="currentColor" d="M132.83 62.03h-18.5c-0.28 0-0.5-0.22-0.5-0.5s0.22-0.5 0.5-0.5h18.5c0.28 0 0.5 0.22 0.5 0.5S133.1 62.03 132.83 62.03z"/>
+  <path fill="currentColor" d="M59.93 62.03h-18.5c-0.28 0-0.5-0.22-0.5-0.5s0.22-0.5 0.5-0.5h18.5c0.28 0 0.5 0.22 0.5 0.5S60.21 62.03 59.93 62.03z"/>
+  <path fill="currentColor" d="M67.9 42.8c-0.13 0-0.26-0.05-0.35-0.15L54.47 29.57c-0.2-0.2-0.2-0.51 0-0.71s0.51-0.2 0.71 0l13.08 13.08c0.2 0.2 0.2 0.51 0 0.71C68.16 42.75 68.03 42.8 67.9 42.8z"/>
+  <path fill="currentColor" d="M76.72 36.9c-0.2 0-0.38-0.12-0.46-0.31l-2.97-7.18c-0.11-0.26 0.02-0.55 0.27-0.65 0.25-0.1 0.55 0.02 0.65 0.27l2.97 7.18c0.11 0.26-0.02 0.55-0.27 0.65C76.85 36.89 76.79 36.9 76.72 36.9z"/>
+  <path fill="currentColor" d="M97.54 36.9c-0.06 0-0.13-0.01-0.19-0.04 -0.25-0.11-0.38-0.4-0.27-0.65l2.97-7.18c0.11-0.26 0.4-0.38 0.65-0.27s0.38 0.4 0.27 0.65l-2.97 7.18C97.93 36.78 97.74 36.9 97.54 36.9z"/>
+  <path fill="currentColor" d="M112.27 51.62c-0.2 0-0.38-0.12-0.46-0.31 -0.11-0.26 0.02-0.55 0.27-0.65l7.18-2.97c0.25-0.1 0.55 0.02 0.65 0.27s-0.02 0.55-0.27 0.65l-7.18 2.97C112.39 51.61 112.33 51.62 112.27 51.62z"/>
+  <path fill="currentColor" d="M119.44 75.42c-0.06 0-0.13-0.01-0.19-0.04l-7.18-2.97c-0.25-0.11-0.38-0.4-0.27-0.65 0.11-0.25 0.4-0.38 0.65-0.27l7.18 2.97c0.25 0.11 0.38 0.4 0.27 0.65C119.83 75.3 119.64 75.42 119.44 75.42z"/>
+  <path fill="currentColor" d="M54.82 75.42c-0.2 0-0.38-0.12-0.46-0.31 -0.11-0.26 0.02-0.55 0.27-0.65l7.18-2.97c0.25-0.11 0.55 0.02 0.65 0.27s-0.02 0.55-0.27 0.65l-7.18 2.97C54.95 75.4 54.89 75.42 54.82 75.42z"/>
+  <path fill="currentColor" d="M62 51.62c-0.06 0-0.13-0.01-0.19-0.04l-7.18-2.97c-0.25-0.11-0.38-0.4-0.27-0.65s0.4-0.38 0.65-0.27l7.18 2.97c0.25 0.11 0.38 0.4 0.27 0.65C62.38 51.51 62.2 51.62 62 51.62z"/>
+  <g id="SPLINE_1_">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M74.57 50.52c0-1.06-0.03-2.26 0.67-3.13 0.61-0.76 1.56-1.22 2.46-1.55 0.96-0.36 1.95-0.6 2.96-0.79 2.14-0.4 4.31-0.53 6.48-0.55 1.22 0.01 2.44 0.05 3.66 0.16 2.06 0.19 4.2 0.51 6.13 1.3 0.88 0.36 1.81 0.87 2.32 1.71 0.5 0.83 0.46 1.91 0.46 2.84"/>
+  </g>
+  <ellipse fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="87.14" cy="47.87" rx="4.09" ry="1.11"/>
+  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M99.7 55.08c0 1.88-5.62 3.4-12.56 3.4 -6.94 0-12.56-1.52-12.56-3.4"/>
+  <circle fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="87.14" cy="54.48" r="0.8"/>
+  <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="74.57" y1="184.66" x2="74.57" y2="54.87"/>
+  <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="74.57" y1="54.87" x2="74.57" y2="50.52"/>
+  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M99.69 184.66c0 1.98-5.61 3.59-12.55 3.59 -6.94 0-12.57-1.61-12.57-3.59"/>
+  <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="99.68" y1="188.86" x2="99.68" y2="191"/>
+  <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="74.57" y1="188.86" x2="74.57" y2="191"/>
+  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M99.69 191c0 1.94-5.62 3.51-12.55 3.51s-12.55-1.57-12.55-3.51"/>
+  <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="99.7" y1="184.66" x2="99.7" y2="50.52"/>
+  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M97.26 186.78c1.53 0.56 2.43 1.24 2.43 1.98 0 1.85-5.62 3.35-12.55 3.35 -6.93 0-12.55-1.5-12.55-3.35 0-0.74 0.9-1.43 2.43-1.98"/>
+  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M87.89 155.95h-1.51c-0.61 0-1.1-0.49-1.1-1.1v-8.54c0-0.61 0.49-1.1 1.1-1.1h1.51c0.61 0 1.1 0.49 1.1 1.1v8.54C88.99 155.45 88.5 155.95 87.89 155.95z"/>
+</svg>

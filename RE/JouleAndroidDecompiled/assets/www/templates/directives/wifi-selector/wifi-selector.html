@@ -1,0 +1,13 @@
+<div class='access-point' ng-click='handleClickAccessPoint(accessPoint)' ng-repeat='accessPoint in accessPoints'>
+  <div class='access-point-ssid'>{{ accessPoint.ssid }}</div>
+  <div class='access-point-details'>
+    <svg class='access-point-security'>
+      <use ng-show="accessPoint.securityType === 'WPA' || accessPoint.securityType === 'WPA2' || accessPoint.securityType === 'WEP'" xlink:href='svg/wifi-protected.svg#wifi-protected'></use>
+    </svg>
+    <svg class='access-point-signal'>
+      <use ng-show="accessPoint.signalStrength == 'strong' " xlink:href='svg/wifi-strong.svg#wifi-strong'></use>
+      <use ng-show="accessPoint.signalStrength == 'medium' " xlink:href='svg/wifi-medium.svg#wifi-medium'></use>
+      <use ng-show="accessPoint.signalStrength == 'weak' " xlink:href='svg/wifi-weak.svg#wifi-weak'></use>
+    </svg>
+  </div>
+</div>

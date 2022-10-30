@@ -1,0 +1,8 @@
+<svg id="known-issues" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.98 69.54">
+  <path fill="none" stroke="currentColor" stroke-width="1.5" d="M32.99 23.71v41.08a4.17 4.17 0 0 1-4.1 4H4.79a4 4 0 0 1-4-4v-53.3a4 4 0 0 1 4-4h12.72M.75 57.49h32.1"/>
+  <circle fill="none" stroke="currentColor" stroke-width="1.5" cx="16.85" cy="62.99" r="2.7"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.5" d="M16.36 13.5h-2.3a.47.47 0 0 1-.5-.5v-.9a.47.47 0 0 1 .5-.5h2.42"/>
+  <circle fill="none" stroke="currentColor" stroke-width="1.5" cx="28.44" cy="12.54" r="11.79"/>
+  <path fill="none" stroke="currentColor" stroke-width="1.5" d="M28.44 7.27v5.84"/>
+  <circle fill="none" stroke="currentColor" stroke-width="1.5" cx="28.44" cy="17.02" r=".25"/>
+</svg>

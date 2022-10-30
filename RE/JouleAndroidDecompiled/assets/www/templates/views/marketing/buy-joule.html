@@ -1,0 +1,14 @@
+<ion-view>
+  <background-video autoplay class='overview-page-video' disable-video='disableOverviewVideo || !videoEnabled' poster-slug='{{ getGuideOverviewImage() }}' video-slug='{{ getGuideVideo() }}'>
+    <div class='huge-gradient'></div>
+  </background-video>
+  <div class='buy-joule-title' i18n='marketing.buyJouleTitle'></div>
+  <button class='style-rounded color-brand buy-joule-button' ng-click='jouleAdClick()'>
+    <h5 i18n='marketing.buyJouleCTA'></h5>
+    <svg class='punch-out-icon-buy-joule'>
+      <use xlink:href='svg/punch-out.svg#punch-out'></use>
+    </svg>
+  </button>
+  <button class='style-rounded bordered-color-white active-white skip-to-pairing-button' i18n='marketing.skipToPairing' ui-sref='pairingSequencePrompt'></button>
+  <close-button action='onCancelButtonClick()' color='white' state='{{closeButtonState}}'></close-button>
+</ion-view>

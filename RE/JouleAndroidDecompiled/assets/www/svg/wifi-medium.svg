@@ -1,0 +1,5 @@
+<svg id="wifi-medium" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" version="1.1" x="0" y="0" width="16.87" height="11.41" viewBox="0 0 16.87 11.41" enable-background="new 0 0 16.8739 11.4121" xml:space="preserve">
+  <path fill="none" stroke="#B8B6B4" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M1 4.03C2.92 2.16 5.54 1 8.44 1s5.52 1.16 7.44 3.03"></path>
+  <path fill="none" stroke="#43413F" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M3.78 7.15c1.21-1.16 2.85-1.88 4.66-1.88 1.81 0 3.45 0.72 4.66 1.88"></path>
+  <circle fill-rule="evenodd" clip-rule="evenodd" fill="#43413F" cx="8.44" cy="9.91" r="1.5"></circle>
+</svg>
